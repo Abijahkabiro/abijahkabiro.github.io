@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abijah Kabiro Portfolio</title>
+<title>Abijah Kabiro | Data Analyst</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -27,7 +27,6 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -86,7 +85,7 @@
     font-weight: 600 !important;
   }
 
-  .nav-cta:hover { opacity: 0.9; color: var(--navy) !important; }
+  .nav-cta:hover { opacity: 0.9; }
 
   /* HERO */
   .hero {
@@ -117,13 +116,9 @@
   }
 
   .hero-content {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
   }
 
   .hero-tag {
@@ -166,15 +161,18 @@
   .hero-desc {
     color: var(--grey-400);
     font-size: 1.1rem;
-    line-height: 1.7;
+    line-height: 1.8;
     margin-bottom: 2rem;
-    max-width: 500px;
+    max-width: 650px;
   }
 
   .hero-stats {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     margin-bottom: 2.5rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
   }
 
   .hero-stat {
@@ -200,6 +198,7 @@
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    margin-top: 2rem;
   }
 
   .btn-primary {
@@ -228,60 +227,6 @@
   }
 
   .btn-secondary:hover { border-color: var(--accent); transform: translateY(-2px); }
-
-  .hero-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .kpi-card-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    max-width: 400px;
-  }
-
-  .kpi-card {
-    background: var(--navy-mid);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: transform 0.2s, border-color 0.2s;
-  }
-
-  .kpi-card:hover { transform: translateY(-4px); border-color: rgba(0, 212, 170, 0.3); }
-
-  .kpi-card.accent-card {
-    background: linear-gradient(135deg, rgba(0, 212, 170, 0.15), rgba(0, 212, 170, 0.05));
-    border-color: rgba(0, 212, 170, 0.3);
-  }
-
-  .kpi-label {
-    font-size: 0.75rem;
-    color: var(--grey-400);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
-  }
-
-  .kpi-value {
-    font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--white);
-  }
-
-  .kpi-value.red { color: var(--red); }
-  .kpi-value.green { color: var(--green); }
-  .kpi-value.accent { color: var(--accent); }
-  .kpi-value.amber { color: var(--amber); }
-
-  .kpi-sub {
-    font-size: 0.8rem;
-    color: var(--grey-400);
-    margin-top: 0.25rem;
-  }
 
   /* SECTIONS */
   section {
@@ -394,6 +339,13 @@
     overflow: hidden;
   }
 
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
   .project-image-placeholder {
     display: flex;
     flex-direction: column;
@@ -404,52 +356,6 @@
     font-size: 0.9rem;
     text-align: center;
     padding: 2rem;
-  }
-
-  .project-image-placeholder .dashboard-preview {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0.4rem;
-    width: 100%;
-    max-width: 280px;
-  }
-
-  .preview-kpi {
-    background: rgba(0,212,170,0.12);
-    border: 1px solid rgba(0,212,170,0.25);
-    border-radius: 6px;
-    padding: 0.6rem;
-    text-align: center;
-  }
-
-  .preview-kpi-val {
-    font-family: var(--font-display);
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--accent);
-  }
-
-  .preview-kpi-label {
-    font-size: 0.55rem;
-    color: var(--grey-400);
-    margin-top: 0.1rem;
-  }
-
-  .preview-chart {
-    grid-column: span 3;
-    background: rgba(46,117,182,0.12);
-    border: 1px solid rgba(46,117,182,0.25);
-    border-radius: 6px;
-    padding: 0.6rem;
-    display: flex;
-    align-items: flex-end;
-    gap: 0.3rem;
-    height: 60px;
-  }
-
-  .preview-bar {
-    flex: 1;
-    border-radius: 3px 3px 0 0;
   }
 
   .project-content {
@@ -541,9 +447,7 @@
 
   .project-link:hover { opacity: 0.7; }
 
-  .project-card.coming-soon {
-    opacity: 0.6;
-  }
+  .project-card.coming-soon { opacity: 0.6; }
 
   .coming-soon-badge {
     display: inline-block;
@@ -610,9 +514,7 @@
     margin-bottom: 1rem;
   }
 
-  .experience-bullets {
-    list-style: none;
-  }
+  .experience-bullets { list-style: none; }
 
   .experience-bullets li {
     color: var(--grey-200);
@@ -670,22 +572,10 @@
   }
 
   .contact-card:hover { transform: translateY(-4px); border-color: rgba(0,212,170,0.3); }
+  .contact-icon { font-size: 1.5rem; }
+  .contact-label { font-weight: 600; font-size: 0.95rem; }
+  .contact-sub { font-size: 0.8rem; color: var(--grey-400); }
 
-  .contact-icon {
-    font-size: 1.5rem;
-  }
-
-  .contact-label {
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
-
-  .contact-sub {
-    font-size: 0.8rem;
-    color: var(--grey-400);
-  }
-
-  /* FOOTER */
   footer {
     text-align: center;
     padding: 2rem 4rem;
@@ -694,14 +584,12 @@
     border-top: 1px solid rgba(255,255,255,0.05);
   }
 
-  /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
     .hero { padding: 7rem 1.5rem 3rem; }
-    .hero-content { grid-template-columns: 1fr; gap: 3rem; }
     .hero h1 { font-size: 2.5rem; }
-    .kpi-card-grid { max-width: 100%; }
+    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
     section { padding: 4rem 1.5rem; }
     .skills-section { padding: 4rem 1.5rem; }
     .skills-grid { grid-template-columns: 1fr; }
@@ -729,34 +617,36 @@
 <!-- HERO -->
 <div class="hero">
   <div class="hero-content">
-    <div class="hero-text">
-      <div class="hero-tag">Open to opportunities</div>
-      <h1>Data Analyst<br>based in <span>Nairobi</span></h1>
-      <p class="hero-desc">
-       I'm Abijah Kabiro, a Data and BI Analyst with expertise in Excel, Power BI, SQL, Python, and Google Sheets. I specialize in data cleaning, analysis, visualization, and business intelligence, transforming complex data into meaningful insights that support informed decision-making.
-
-I build interactive dashboards, optimize SQL queries, and automate data processes to improve efficiency and drive business value. As a continuous learner, I am committed to leveraging data to solve problems and uncover opportunities.
-      </p>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <span class="hero-stat-num">4+</span>
-          <span class="hero-stat-label">Years Experience</span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-num">61%</span>
-          <span class="hero-stat-label">Report Time Saved</span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-num">27%</span>
-          <span class="hero-stat-label">Cost Reduction</span>
-        </div>
+    <div class="hero-tag">Open to opportunities</div>
+    <h1>I am Abijah Kabiro,<br>a <span>Data Analyst</span><br>based in Nairobi, Kenya</h1>
+    <p class="hero-desc">
+      Four years of experience turning complex operational data into clear business decisions. I specialise in SQL, Power BI, Python and Google Sheets, working across supply chain, logistics, fintech and FMCG. Every project I build starts with a business question and ends with an output that teams can actually use.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">4+</span>
+        <span class="hero-stat-label">Years Experience</span>
       </div>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="https://github.com/Abijahkabiro" target="_blank" target="_blank" class="btn-secondary">GitHub</a>
-        <a href="https://www.linkedin.com/in/abijahkabiro/" target="_blank" class="btn-secondary">LinkedIn</a>
+      <div class="hero-stat">
+        <span class="hero-stat-num">61%</span>
+        <span class="hero-stat-label">Report Time Saved</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">27%</span>
+        <span class="hero-stat-label">Cost Reduction</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">100K+</span>
+        <span class="hero-stat-label">Records Monthly</span>
       </div>
     </div>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="https://github.com/Abijahkabiro" target="_blank" class="btn-secondary">GitHub</a>
+      <a href="https://www.linkedin.com/in/abijahkabiro/" target="_blank" class="btn-secondary">LinkedIn</a>
+    </div>
+  </div>
+</div>
 
 <!-- SKILLS -->
 <div class="skills-section" id="about">
@@ -810,26 +700,7 @@ I build interactive dashboards, optimize SQL queries, and automate data processe
     <div class="project-card">
       <div class="project-image">
         <div class="project-image-placeholder">
-          <div class="dashboard-preview">
-            <div class="preview-kpi">
-              <div class="preview-kpi-val">171K</div>
-              <div class="preview-kpi-label">Orders</div>
-            </div>
-            <div class="preview-kpi">
-              <div class="preview-kpi-val" style="color: #FF6B6B;">57.8%</div>
-              <div class="preview-kpi-label">Late Rate</div>
-            </div>
-            <div class="preview-kpi">
-              <div class="preview-kpi-val" style="color: #FF6B6B;">100%</div>
-              <div class="preview-kpi-label">1st Class</div>
-            </div>
-            <div class="preview-chart">
-              <div class="preview-bar" style="height: 100%; background: #FF6B6B;"></div>
-              <div class="preview-bar" style="height: 80%; background: #FFB830;"></div>
-              <div class="preview-bar" style="height: 40%; background: #00C896;"></div>
-            </div>
-          </div>
-          <span style="font-size: 0.75rem; color: var(--grey-400);">Add dashboard screenshot here</span>
+          <div style="font-size: 0.85rem; color: var(--grey-400);">Add Supply Chain Performance Dashboard.png here</div>
         </div>
       </div>
       <div class="project-content">
@@ -854,7 +725,7 @@ I build interactive dashboards, optimize SQL queries, and automate data processe
             </div>
             <div class="project-finding">
               <span class="finding-dot"></span>
-              <span>No seasonal pattern found — delays are structural, not demand-driven</span>
+              <span>No seasonal pattern found. Delays are structural, not demand-driven</span>
             </div>
           </div>
           <div class="project-tools">
@@ -865,17 +736,13 @@ I build interactive dashboards, optimize SQL queries, and automate data processe
           </div>
         </div>
         <div class="project-links">
-          <a href="https://github.com/Abijahkabiro/Supply_chain_delay_analysis" target="_blank" class="project-link">
-            ↗ GitHub Repo
-          </a>
-          <a href="https://docs.google.com/spreadsheets/d/11WScYkRSGapPfTlJoQ433jA0oXYXpSJQXd4qfvKiixY/edit?usp=sharing" target="_blank" class="project-link">
-            ↗ Live Report
-          </a>
+          <a href="https://github.com/Abijahkabiro/Supply_chain_delay_analysis" target="_blank" class="project-link">↗ GitHub Repo</a>
+          <a href="https://docs.google.com/spreadsheets/d/11WScYkRSGapPfTlJoQ433jA0oXYXpSJQXd4qfvKiixY/edit?usp=sharing" target="_blank" class="project-link">↗ Live Report</a>
         </div>
       </div>
     </div>
 
-    <!-- Project 2 coming soon -->
+    <!-- Project 2 -->
     <div class="project-card coming-soon">
       <div class="project-image">
         <div class="project-image-placeholder">
@@ -904,7 +771,7 @@ I build interactive dashboards, optimize SQL queries, and automate data processe
       </div>
     </div>
 
-    <!-- Project 3 coming soon -->
+    <!-- Project 3 -->
     <div class="project-card coming-soon">
       <div class="project-image">
         <div class="project-image-placeholder">
@@ -978,15 +845,14 @@ I build interactive dashboards, optimize SQL queries, and automate data processe
     <div class="section-eyebrow">Contact</div>
     <h2 class="section-title">Get in Touch</h2>
     <p class="section-desc" style="margin: 0 auto 0;">
-      Open to Senior Data Analyst and BI Analyst roles in fintech, banking, logistics and FMCG.
-    </p>
+      Open to Senior Data Analyst and BI Analyst roles in fintech, banking, logistics and FMCG. 
     <div class="contact-grid">
       <a href="https://www.linkedin.com/in/abijahkabiro/" target="_blank" class="contact-card">
         <div class="contact-icon">💼</div>
         <div class="contact-label">LinkedIn</div>
         <div class="contact-sub">Abijah Kabiro</div>
       </a>
-      <a href="https://github.com/Abijahkabiro" target="_blank" target="_blank" class="contact-card">
+      <a href="https://github.com/Abijahkabiro" target="_blank" class="contact-card">
         <div class="contact-icon">💻</div>
         <div class="contact-label">GitHub</div>
         <div class="contact-sub">Abijahkabiro</div>
@@ -1001,7 +867,7 @@ I build interactive dashboards, optimize SQL queries, and automate data processe
 </div>
 
 <footer>
-  I am Abijah Kabiro · Data Analyst · Nairobi, Kenya · 2026
+  Abijah Kabiro · Data Analyst · Nairobi, Kenya · 2026
 </footer>
 
 </body>
