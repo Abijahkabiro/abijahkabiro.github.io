@@ -15,7 +15,6 @@
     --accent: #00D4AA;
     --accent-dim: #00D4AA22;
     --white: #FFFFFF;
-    --grey-100: #F5F7FA;
     --grey-200: #E8ECF1;
     --grey-400: #9BA8B7;
     --grey-600: #5A6A7A;
@@ -65,6 +64,7 @@
     display: flex;
     gap: 2rem;
     list-style: none;
+    align-items: center;
   }
 
   .nav-links a {
@@ -85,8 +85,6 @@
     font-weight: 600 !important;
   }
 
-  .nav-cta:hover { opacity: 0.9; }
-
   /* HERO */
   .hero {
     min-height: 100vh;
@@ -102,7 +100,7 @@
     position: absolute;
     top: -200px; right: -200px;
     width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(0, 212, 170, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0,212,170,0.08) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -111,14 +109,37 @@
     position: absolute;
     bottom: -100px; left: -100px;
     width: 400px; height: 400px;
-    background: radial-gradient(circle, rgba(46, 117, 182, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(46,117,182,0.1) 0%, transparent 70%);
     pointer-events: none;
   }
 
-  .hero-content {
-    max-width: 800px;
+  /* Two column hero layout */
+  .hero-inner {
+    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  /* Photo */
+  .hero-photo {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 3px solid rgba(0,212,170,0.3);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 40px rgba(0,212,170,0.08);
+  }
+
+  .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
   }
 
   .hero-tag {
@@ -126,7 +147,7 @@
     align-items: center;
     gap: 0.5rem;
     background: var(--accent-dim);
-    border: 1px solid rgba(0, 212, 170, 0.3);
+    border: 1px solid rgba(0,212,170,0.3);
     color: var(--accent);
     padding: 0.4rem 1rem;
     border-radius: 20px;
@@ -150,9 +171,9 @@
 
   .hero h1 {
     font-family: var(--font-display);
-    font-size: 3.8rem;
+    font-size: 3.4rem;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.15;
     margin-bottom: 1.5rem;
   }
 
@@ -160,25 +181,22 @@
 
   .hero-desc {
     color: var(--grey-400);
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     line-height: 1.8;
     margin-bottom: 2rem;
-    max-width: 650px;
   }
 
   .hero-stats {
     display: flex;
-    gap: 3rem;
+    gap: 2.5rem;
     margin-bottom: 2.5rem;
     padding: 1.5rem 0;
     border-top: 1px solid rgba(255,255,255,0.07);
     border-bottom: 1px solid rgba(255,255,255,0.07);
+    flex-wrap: wrap;
   }
 
-  .hero-stat {
-    display: flex;
-    flex-direction: column;
-  }
+  .hero-stat { display: flex; flex-direction: column; }
 
   .hero-stat-num {
     font-family: var(--font-display);
@@ -188,7 +206,7 @@
   }
 
   .hero-stat-label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--grey-400);
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -267,10 +285,7 @@
     padding: 5rem 4rem;
   }
 
-  .skills-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  .skills-inner { max-width: 1200px; margin: 0 auto; }
 
   .skills-grid {
     display: grid;
@@ -309,10 +324,7 @@
   }
 
   /* PROJECTS */
-  .projects-grid {
-    display: grid;
-    gap: 2.5rem;
-  }
+  .projects-grid { display: grid; gap: 2.5rem; }
 
   .project-card {
     background: var(--navy-mid);
@@ -326,24 +338,24 @@
 
   .project-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(0, 212, 170, 0.25);
+    border-color: rgba(0,212,170,0.25);
   }
 
   .project-image {
     background: var(--navy-light);
-    min-height: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    min-height: 300px;
     overflow: hidden;
+    position: relative;
   }
 
   .project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: top left;
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
   }
 
   .project-image-placeholder {
@@ -356,6 +368,7 @@
     font-size: 0.9rem;
     text-align: center;
     padding: 2rem;
+    height: 100%;
   }
 
   .project-content {
@@ -390,9 +403,7 @@
     margin-bottom: 1.5rem;
   }
 
-  .project-findings {
-    margin-bottom: 1.5rem;
-  }
+  .project-findings { margin-bottom: 1.5rem; }
 
   .project-finding {
     display: flex;
@@ -404,8 +415,7 @@
   }
 
   .finding-dot {
-    width: 6px;
-    height: 6px;
+    width: 6px; height: 6px;
     border-radius: 50%;
     background: var(--accent);
     margin-top: 0.5rem;
@@ -428,11 +438,7 @@
     border: 1px solid rgba(46,117,182,0.25);
   }
 
-  .project-links {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
+  .project-links { display: flex; gap: 1rem; flex-wrap: wrap; }
 
   .project-link {
     display: inline-flex;
@@ -446,7 +452,6 @@
   }
 
   .project-link:hover { opacity: 0.7; }
-
   .project-card.coming-soon { opacity: 0.6; }
 
   .coming-soon-badge {
@@ -462,10 +467,7 @@
   }
 
   /* EXPERIENCE */
-  .experience-timeline {
-    position: relative;
-    padding-left: 2rem;
-  }
+  .experience-timeline { position: relative; padding-left: 2rem; }
 
   .experience-timeline::before {
     content: '';
@@ -508,19 +510,13 @@
     margin-bottom: 0.25rem;
   }
 
-  .experience-company {
-    color: var(--grey-400);
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-  }
-
+  .experience-company { color: var(--grey-400); font-size: 0.95rem; margin-bottom: 1rem; }
   .experience-bullets { list-style: none; }
 
   .experience-bullets li {
     color: var(--grey-200);
     font-size: 0.9rem;
-    padding: 0.3rem 0;
-    padding-left: 1.2rem;
+    padding: 0.3rem 0 0.3rem 1.2rem;
     position: relative;
     line-height: 1.6;
   }
@@ -535,10 +531,7 @@
   }
 
   /* CONTACT */
-  .contact-section {
-    background: var(--navy-mid);
-    border-top: 1px solid rgba(255,255,255,0.05);
-  }
+  .contact-section { background: var(--navy-mid); border-top: 1px solid rgba(255,255,255,0.05); }
 
   .contact-inner {
     max-width: 1200px;
@@ -584,17 +577,28 @@
     border-top: 1px solid rgba(255,255,255,0.05);
   }
 
-  @media (max-width: 900px) {
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .hero-inner { grid-template-columns: 1fr 260px; gap: 3rem; }
+    .hero h1 { font-size: 2.8rem; }
+  }
+
+  @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
     .hero { padding: 7rem 1.5rem 3rem; }
-    .hero h1 { font-size: 2.5rem; }
-    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    .hero-inner { grid-template-columns: 1fr 140px; gap: 1.5rem; align-items: flex-start; }
+    .hero-photo { width: 140px; aspect-ratio: 3/4; }
+    .hero h1 { font-size: 1.6rem; }
+    .hero-desc { font-size: 0.9rem; }
+    .hero-stats { gap: 1rem; }
+    .hero-stat-num { font-size: 1.3rem; }
+    .hero-stat-label { font-size: 0.65rem; }
     section { padding: 4rem 1.5rem; }
     .skills-section { padding: 4rem 1.5rem; }
     .skills-grid { grid-template-columns: 1fr; }
     .project-card { grid-template-columns: 1fr; }
-    .project-image { min-height: 200px; }
+    .project-image { min-height: 220px; }
     .contact-inner { padding: 4rem 1.5rem; }
     .contact-grid { grid-template-columns: 1fr; max-width: 300px; }
     footer { padding: 2rem 1.5rem; }
@@ -605,7 +609,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">Abijah Kabiro Portfolio<span>.</span></a>
+  <a href="#" class="nav-logo">Abijah Kabiro<span>.</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -616,35 +620,45 @@
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-content">
-    <div class="hero-tag">Open to opportunities</div>
-    <h1>I am Abijah Kabiro,<br>a <span>Data Analyst</span><br>based in Nairobi, Kenya</h1>
-    <p class="hero-desc">
-      Four years of experience turning complex operational data into clear business decisions. I specialise in SQL, Power BI, Python and Google Sheets, working across supply chain, logistics, fintech and FMCG. Every project I build starts with a business question and ends with an output that teams can actually use.
-    </p>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-num">4+</span>
-        <span class="hero-stat-label">Years Experience</span>
+  <div class="hero-inner">
+
+    <!-- Text side -->
+    <div class="hero-text">
+      <div class="hero-tag">Open to opportunities</div>
+      <h1>I am Abijah Kabiro,<br>a <span>Data Analyst</span><br>based in Nairobi, Kenya</h1>
+      <p class="hero-desc">
+        With 4 years of experience turning complex operational data into clear business decisions, I specialise in SQL, Power BI, Python and Google Sheets, working across supply chain, logistics, fintech and FMCG. Every project I build starts with understanding the business problem, the data provided and the questions that need answering.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">4+</span>
+          <span class="hero-stat-label">Years Experience</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">61%</span>
+          <span class="hero-stat-label">Report Time Saved</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">27%</span>
+          <span class="hero-stat-label">Cost Reduction</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">100K+</span>
+          <span class="hero-stat-label">Records Monthly</span>
+        </div>
       </div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">61%</span>
-        <span class="hero-stat-label">Report Time Saved</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">27%</span>
-        <span class="hero-stat-label">Cost Reduction</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">100K+</span>
-        <span class="hero-stat-label">Records Monthly</span>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="https://github.com/Abijahkabiro" target="_blank" class="btn-secondary">GitHub</a>
+        <a href="https://www.linkedin.com/in/abijahkabiro/" target="_blank" class="btn-secondary">LinkedIn</a>
       </div>
     </div>
-    <div class="hero-buttons">
-      <a href="#projects" class="btn-primary">View Projects</a>
-      <a href="https://github.com/Abijahkabiro" target="_blank" class="btn-secondary">GitHub</a>
-      <a href="https://www.linkedin.com/in/abijahkabiro/" target="_blank" class="btn-secondary">LinkedIn</a>
+
+    <!-- Photo side -->
+    <div class="hero-photo">
+      <img src="abijah.jpg" alt="Abijah Kabiro">
     </div>
+
   </div>
 </div>
 
@@ -699,7 +713,7 @@
     <!-- Project 1 -->
     <div class="project-card">
       <div class="project-image">
-       <img src="project1.png" alt="Supply Chain Performance Dashboard" style="width: 100%; height: auto; display: block;">
+        <img src="Supply%20Chain%20Performance%20Dashboard.png" alt="Supply Chain Performance Dashboard" style="width: 100%; height: 100%; object-fit: contain; object-position: center; position: absolute; top: 0; left: 0; background: #1F3864;">
       </div>
       <div class="project-content">
         <div>
@@ -805,11 +819,9 @@
     <div class="section-eyebrow">Career</div>
     <h2 class="section-title">Experience</h2>
     <p class="section-desc">Four years of operational analytics across logistics, supply chain and education sectors in Kenya.</p>
-
     <div class="experience-timeline">
-
       <div class="experience-item">
-        <div class="experience-period">2023 — Present</div>
+        <div class="experience-period">Apr 2023 — Present</div>
         <div class="experience-role">Data Analyst</div>
         <div class="experience-company">DHL Supply Chain Kenya — Major FMCG Client</div>
         <ul class="experience-bullets">
@@ -821,9 +833,8 @@
           <li>Built a device allocation framework formally adopted into DHL's revised standard operating procedure</li>
         </ul>
       </div>
-
       <div class="experience-item">
-        <div class="experience-period">2022 — 2023</div>
+        <div class="experience-period">Mar 2022 — Mar 2023</div>
         <div class="experience-role">Data Analyst</div>
         <div class="experience-company">FirstCode Corporation Inc.</div>
         <ul class="experience-bullets">
@@ -832,7 +843,6 @@
           <li>Built dashboards and reports supporting operational decision-making across the organisation</li>
         </ul>
       </div>
-
     </div>
   </section>
 </div>
@@ -842,8 +852,8 @@
   <div class="contact-inner">
     <div class="section-eyebrow">Contact</div>
     <h2 class="section-title">Get in Touch</h2>
-    <p class="section-desc" style="margin: 0 auto 0;">
-      Open to Senior Data Analyst and BI Analyst roles in fintech, banking, logistics and FMCG.
+    <p class="section-desc" style="margin: 0 auto;">
+      Open to Data Analyst and BI Analyst roles in fintech, banking, logistics and FMCG.
     </p>
     <div class="contact-grid">
       <a href="https://www.linkedin.com/in/abijahkabiro/" target="_blank" class="contact-card">
@@ -866,7 +876,7 @@
 </div>
 
 <footer>
-  Abijah Kabiro · Data Analyst · 2026
+  Abijah Kabiro · Data Analyst · Nairobi, Kenya · 2026
 </footer>
 
 </body>
