@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abijah Kabiro | Data Analyst Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #0D1B2A;
@@ -15,14 +15,14 @@
     --accent: #00D4AA;
     --accent-dim: #00D4AA22;
     --white: #FFFFFF;
-    --grey-200: #E8ECF1;
-    --grey-400: #9BA8B7;
+    --grey-200: #D0D8E4;
+    --grey-400: #8A9BB0;
     --grey-600: #5A6A7A;
     --red: #FF6B6B;
     --amber: #FFB830;
     --green: #00C896;
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-display: 'DM Sans', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -90,7 +90,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 8rem 4rem 4rem;
+    padding: 4rem 4rem 4rem;
     position: relative;
     overflow: hidden;
   }
@@ -175,6 +175,7 @@
     font-weight: 700;
     line-height: 1.15;
     margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
   }
 
   .hero h1 span { color: var(--accent); }
@@ -332,7 +333,7 @@
     border-radius: 16px;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     transition: transform 0.2s, border-color 0.2s;
   }
 
@@ -343,19 +344,16 @@
 
   .project-image {
     background: var(--navy-light);
-    min-height: 300px;
     overflow: hidden;
     position: relative;
+    line-height: 0;
   }
 
   .project-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top left;
+    height: auto;
     display: block;
-    position: absolute;
-    top: 0; left: 0;
+    position: static;
   }
 
   .project-image-placeholder {
@@ -597,8 +595,7 @@
     section { padding: 4rem 1.5rem; }
     .skills-section { padding: 4rem 1.5rem; }
     .skills-grid { grid-template-columns: 1fr; }
-    .project-card { grid-template-columns: 1fr; }
-    .project-image { min-height: 220px; }
+
     .contact-inner { padding: 4rem 1.5rem; }
     .contact-grid { grid-template-columns: 1fr; max-width: 300px; }
     footer { padding: 2rem 1.5rem; }
@@ -618,16 +615,24 @@
   </ul>
 </nav>
 
+
+<!-- GREETING STRIP -->
+<div style="background: rgba(0,212,170,0.1); border-bottom: 1px solid rgba(0,212,170,0.2); padding: 0.6rem 4rem; margin-top: 65px;">
+  <p style="font-size: 0.85rem; font-weight: 600; max-width: 1200px; margin: 0 auto; font-family: var(--font-body); display: flex; align-items: center; gap: 0.6rem;">
+    <span style="display:inline-block; width:8px; height:8px; background:#00D4AA; border-radius:50%;"></span>
+    <span style="color: #00D4AA;">Open to opportunities</span>
+  </p>
+</div>
+
 <!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
 
     <!-- Text side -->
     <div class="hero-text">
-      <div class="hero-tag">Open to opportunities</div>
-      <h1>I am Abijah Kabiro,<br>a <span>Data Analyst</span><br>based in Nairobi, Kenya</h1>
+      <h1>Hello, I am <span>Abijah Kabiro</span>,<br>a Data Analyst<br>based in Nairobi, Kenya</h1>
       <p class="hero-desc">
-        With 4 years of experience turning complex operational data into clear business decisions, I specialise in SQL, Power BI, Python and Google Sheets, working across supply chain, logistics, fintech and FMCG. Every project I build starts with understanding the business problem, the data provided and the questions that need answering.
+        4 years of experience turning messy operational data into clear business decisions. SQL, Power BI, Python and Google Sheets across supply chain, logistics, fintech and FMCG. Every project starts with the business problem, not the tool.
       </p>
       <div class="hero-stats">
         <div class="hero-stat">
@@ -667,7 +672,7 @@
   <div class="skills-inner">
     <div class="section-eyebrow">Skills and Tools</div>
     <h2 class="section-title">What I Work With</h2>
-    <p class="section-desc">Four years of hands-on experience across the full analytics stack, from raw data in SQL to published dashboards in Power BI.</p>
+    <p class="section-desc">Four years across the full analytics stack. Raw data in SQL to published dashboards in Power BI.</p>
     <div class="skills-grid">
       <div class="skill-group">
         <div class="skill-group-title">📊 Analysis</div>
@@ -706,21 +711,21 @@
 <section id="projects">
   <div class="section-eyebrow">Portfolio</div>
   <h2 class="section-title">Projects</h2>
-  <p class="section-desc">Each project starts with a business question, not a tool. Every output is designed to be used, not just viewed.</p>
+  <p class="section-desc">Each project starts with a business question. Every output is built to be used, not just viewed.</p>
 
   <div class="projects-grid">
 
     <!-- Project 1 -->
     <div class="project-card">
       <div class="project-image">
-        <img src="Supply%20Chain%20Performance%20Dashboard.png" alt="Supply Chain Performance Dashboard" style="width: 100%; height: 100%; object-fit: contain; object-position: center; position: absolute; top: 0; left: 0; background: #1F3864;">
+        <img src="Supply%20Chain%20Performance%20Dashboard.png" alt="Supply Chain Performance Dashboard" style="width:100%;height:auto;display:block;position:static;">
       </div>
       <div class="project-content">
         <div>
-          <div class="project-number">Project 01 — Supply Chain Analytics</div>
+          <div class="project-number">Project 01 · Supply Chain Analytics</div>
           <h3 class="project-title">Supply Chain Delay Pattern Detector</h3>
           <p class="project-desc">
-            Analysis of 180,519 orders to identify delivery delay patterns across shipping modes, regions and product categories. Built a weekly exception report with CRITICAL, WARNING and MONITOR flags for operations teams.
+            Analysed 180,519 orders to find where deliveries fail, which routes need attention, and what is costing the business money. Built a weekly exception report that flags CRITICAL, WARNING and MONITOR routes for operations teams.
           </p>
           <div class="project-findings">
             <div class="project-finding">
@@ -756,35 +761,53 @@
     </div>
 
     <!-- Project 2 -->
-    <div class="project-card coming-soon">
+    <div class="project-card">
       <div class="project-image">
-        <div class="project-image-placeholder">
-          <div style="font-size: 3rem;">🏦</div>
-          <span style="font-size: 0.85rem; color: var(--grey-400);">Coming Soon</span>
-        </div>
+        <img src="churnoverview.png" alt="Fidelis National Bank Customer Churn Analysis" style="width:100%;height:auto;display:block;position:static;">
       </div>
       <div class="project-content">
         <div>
-          <div class="coming-soon-badge">In Progress</div>
-          <div class="project-number">Project 02 — Fintech Analytics</div>
-          <h3 class="project-title">Bank Customer Churn Analysis</h3>
+          <div class="project-number">Project 02 · Banking Analytics</div>
+          <h3 class="project-title">Fidelis National Bank Customer Churn Analysis</h3>
           <p class="project-desc">
-            Identifying which customers are at risk of leaving before they leave. Using the Kaggle Churn Modelling dataset to build a retention-focused analysis with a CRM-ready output for retention teams.
+            Analysed 10,000 bank customers to find who is leaving and why. The finding no one expected: the customers leaving had more money than the ones who stayed. Built a Logistic Regression model and a 4-page Power BI dashboard with five retention recommendations.
           </p>
+          <div class="project-findings">
+            <div class="project-finding">
+              <span class="finding-dot"></span>
+              <span>20.4% overall churn rate. 1 in every 5 customers has left the bank</span>
+            </div>
+            <div class="project-finding">
+              <span class="finding-dot"></span>
+              <span>Churned customers held higher balances ($91,108) than those who stayed ($72,745)</span>
+            </div>
+            <div class="project-finding">
+              <span class="finding-dot"></span>
+              <span>Customers with 4 products had a 100% churn rate. Over-selling is driving exits</span>
+            </div>
+            <div class="project-finding">
+              <span class="finding-dot"></span>
+              <span>Age and active membership confirmed as the two strongest churn predictors</span>
+            </div>
+          </div>
           <div class="project-tools">
             <span class="tool-tag">Python</span>
-            <span class="tool-tag">Google Colab</span>
+            <span class="tool-tag">Power BI</span>
+            <span class="tool-tag">Scikit-learn</span>
             <span class="tool-tag">Pandas</span>
-            <span class="tool-tag">Matplotlib</span>
+            <span class="tool-tag">DAX</span>
+            <span class="tool-tag">Google Colab</span>
           </div>
         </div>
         <div class="project-links">
-          <span style="color: var(--grey-400); font-size: 0.9rem;">Available soon</span>
+          <a href="https://github.com/Abijahkabiro/bank-customer-churn-analysis" target="_blank" class="project-link">↗ GitHub Repo</a>
+          <a href="https://colab.research.google.com/drive/1zV3grp02eUZmxhMrB4l0a8n168vSCnuX#scrollTo=mTuUa19jhtWB" target="_blank" class="project-link">↗ Google Colab</a>
+          <a href="https://medium.com/@abijahkabiro/bank-churn-ecbb7e2757ab" target="_blank" class="project-link">↗ Medium Article</a>
         </div>
       </div>
     </div>
 
-    <!-- Project 3 -->
+        <!-- Project 3 -->
     <div class="project-card coming-soon">
       <div class="project-image">
         <div class="project-image-placeholder">
@@ -795,10 +818,10 @@
       <div class="project-content">
         <div>
           <div class="coming-soon-badge">Planned</div>
-          <div class="project-number">Project 03 — Fraud Detection</div>
+          <div class="project-number">Project 03 · Fraud Detection</div>
           <h3 class="project-title">PaySim Mobile Money Fraud Detection</h3>
           <p class="project-desc">
-            Detecting fraudulent mobile money transactions using the PaySim dataset. SQL analysis and Power BI dashboard designed for a fraud operations team to monitor and flag suspicious activity.
+            Detecting fraudulent mobile money transactions in a dataset of over 6 million records. SQL analysis and Power BI dashboard built for a fraud operations team to monitor and flag suspicious activity in real time.
           </p>
           <div class="project-tools">
             <span class="tool-tag">SQL Server</span>
@@ -819,12 +842,12 @@
   <section id="experience">
     <div class="section-eyebrow">Career</div>
     <h2 class="section-title">Experience</h2>
-    <p class="section-desc">Four years of operational analytics across logistics, supply chain and education sectors in Kenya.</p>
+    <p class="section-desc">Four years of operational analytics across logistics, supply chain and fintech in Kenya.</p>
     <div class="experience-timeline">
       <div class="experience-item">
-        <div class="experience-period">Apr 2023 — Present</div>
+        <div class="experience-period">Apr 2023 · Present</div>
         <div class="experience-role">Data Analyst</div>
-        <div class="experience-company">DHL Supply Chain Kenya — Major FMCG Client</div>
+        <div class="experience-company">DHL Supply Chain Kenya · Major FMCG Client</div>
         <ul class="experience-bullets">
           <li>Processed 100,000+ monthly delivery records and produced a weekly performance snapshot shared with management every Wednesday</li>
           <li>Reduced report turnaround time by 61% through automated SQL reporting pipelines</li>
@@ -835,7 +858,7 @@
         </ul>
       </div>
       <div class="experience-item">
-        <div class="experience-period">Mar 2022 — Mar 2023</div>
+        <div class="experience-period">Mar 2022 · Mar 2023</div>
         <div class="experience-role">Data Analyst</div>
         <div class="experience-company">FirstCode Corporation Inc.</div>
         <ul class="experience-bullets">
