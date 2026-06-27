@@ -581,8 +581,74 @@
     .hero h1 { font-size: 2.8rem; }
   }
 
-  @media (max-width: 768px) {
+    @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+
+    /* HERO */
+    .hero { padding: 5rem 1.2rem 2.5rem; }
+    .hero-inner {
+      grid-template-columns: 1fr 120px;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .hero-photo {
+      width: 120px;
+      aspect-ratio: 3/4;
+      border-radius: 12px;
+    }
+    .hero h1 {
+      font-size: 1.5rem;
+      line-height: 1.25;
+      word-break: break-word;
+    }
+    .hero-desc {
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 1.5rem;
+    }
+    .hero-stat-num { font-size: 1.4rem; }
+    .hero-stat-label { font-size: 0.68rem; }
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .btn-primary, .btn-secondary {
+      text-align: center;
+      padding: 0.8rem 1rem;
+      font-size: 0.88rem;
+    }
+
+    /* SECTIONS */
+    section { padding: 3rem 1.2rem; }
+    .skills-section { padding: 3rem 1.2rem; }
+    .skills-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .section-title { font-size: 1.6rem; }
+
+    /* PROJECTS */
+    .projects-grid { gap: 1.5rem; }
+
+    /* EXPERIENCE */
+    .experience-timeline { padding-left: 1.2rem; }
+    .experience-item { padding-left: 1.2rem; }
+
+    /* CONTACT */
+    .contact-inner { padding: 3rem 1.2rem; }
+    .contact-grid {
+      grid-template-columns: 1fr;
+      max-width: 100%;
+    }
+
+    /* GREETING STRIP */
+    .greeting-strip { padding: 0.6rem 1.2rem; }
+
+    footer { padding: 1.5rem 1.2rem; }
+  }
     .nav-links { display: none; }
     .hero { padding: 7rem 1.5rem 3rem; }
     .hero-inner { grid-template-columns: 1fr 140px; gap: 1.5rem; align-items: flex-start; }
@@ -632,7 +698,7 @@
     <div class="hero-text">
       <h1>Hello, I am <span>Abijah Kabiro</span>,<br>a Data Analyst<br>based in Nairobi, Kenya</h1>
       <p class="hero-desc">
-        4 years of experience turning messy operational data into clear business decisions. SQL, Power BI, Python and Google Sheets across supply chain, logistics, fintech and FMCG. Every project starts with the business problem, not the tool.
+        For the past four years, I have been solving business problems with data. I have worked across supply chain, logistics, fintech and FMCG, using SQL, Power BI, Advanced Excel, Google Sheets and Python to turn complex data into clear business decisions. My focus is always on understanding the business first before choosing the right tool.
       </p>
       <div class="hero-stats">
         <div class="hero-stat">
@@ -818,10 +884,10 @@
       <div class="project-content">
         <div>
           <div class="coming-soon-badge">Planned</div>
-          <div class="project-number">Project 03 · Fraud Detection</div>
-          <h3 class="project-title">PaySim Mobile Money Fraud Detection</h3>
+          <div class="project-number">Project 03 · Fintech Analytics</div>
+          <h3 class="project-title">FinLend Solutions Mobile Payment Fraud Analysis</h3>
           <p class="project-desc">
-            Detecting fraudulent mobile money transactions in a dataset of over 6 million records. SQL analysis and Power BI dashboard built for a fraud operations team to monitor and flag suspicious activity in real time.
+            Analysis of 250,000 mobile payment transactions for FinLend Solutions, a fictional East African fintech lender. Built to identify fraud patterns, flag high-risk transactions, and give the fraud operations team a Power BI dashboard they can act on every morning.
           </p>
           <div class="project-tools">
             <span class="tool-tag">SQL Server</span>
@@ -834,8 +900,12 @@
       </div>
     </div>
 
+
+
   </div>
 </section>
+
+
 
 <!-- EXPERIENCE -->
 <div style="background: var(--navy-mid); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
