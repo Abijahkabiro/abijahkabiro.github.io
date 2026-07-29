@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abijah Kabiro | Data Analyst Portfolio</title>
+<title>Abijah Kabiro Business Intelligence Analyst Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #0D1B2A;
-    --navy-mid: #1A2E45;
-    --navy-light: #1F3864;
-    --blue: #2E75B6;
-    --blue-light: #5B9BD5;
-    --accent: #00D4AA;
-    --accent-dim: #00D4AA22;
-    --white: #FFFFFF;
-    --grey-200: #D0D8E4;
-    --grey-400: #8A9BB0;
-    --grey-600: #5A6A7A;
-    --red: #FF6B6B;
-    --amber: #FFB830;
-    --green: #00C896;
+    --bg: #F5EEE3;
+    --bg-alt: #ECE1D0;
+    --bg-card: #FBF7F0;
+    --tag: #4A4038;
+    --tag-light: #6B5D50;
+    --accent: #B5502E;
+    --accent-dim: #B5502E1F;
+    --ink: #211C18;
+    --grey-200: #453C33;
+    --grey-400: #746A5C;
+    --grey-600: #736858;
+    --red: #B84A3E;
+    --amber: #9C5A1C;
+    --green: #4E8C63;
     --font-display: 'DM Sans', sans-serif;
     --font-body: 'DM Sans', sans-serif;
   }
@@ -30,8 +30,8 @@
 
   body {
     font-family: var(--font-body);
-    background: var(--navy);
-    color: var(--white);
+    background: var(--bg);
+    color: var(--ink);
     line-height: 1.6;
     overflow-x: hidden;
   }
@@ -45,16 +45,16 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 4rem;
-    background: rgba(13, 27, 42, 0.95);
+    background: rgba(245, 238, 227, 0.92);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 212, 170, 0.15);
+    border-bottom: 1px solid rgba(181, 80, 46, 0.18);
   }
 
   .nav-logo {
     font-family: var(--font-display);
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--white);
+    color: var(--ink);
     text-decoration: none;
   }
 
@@ -79,7 +79,7 @@
 
   .nav-cta {
     background: var(--accent);
-    color: var(--navy) !important;
+    color: var(--bg) !important;
     padding: 0.5rem 1.2rem;
     border-radius: 6px;
     font-weight: 600 !important;
@@ -100,7 +100,7 @@
     position: absolute;
     top: -200px; right: -200px;
     width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(0,212,170,0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(181,80,46,0.08) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -109,7 +109,7 @@
     position: absolute;
     bottom: -100px; left: -100px;
     width: 400px; height: 400px;
-    background: radial-gradient(circle, rgba(46,117,182,0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(74,64,56,0.1) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -130,8 +130,8 @@
     aspect-ratio: 3 / 4;
     border-radius: 20px;
     overflow: hidden;
-    border: 3px solid rgba(0,212,170,0.3);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 40px rgba(0,212,170,0.08);
+    border: 3px solid rgba(181,80,46,0.3);
+    box-shadow: 0 20px 60px rgba(74,64,56,0.15), 0 0 40px rgba(181,80,46,0.08);
   }
 
   .hero-photo img {
@@ -147,7 +147,7 @@
     align-items: center;
     gap: 0.5rem;
     background: var(--accent-dim);
-    border: 1px solid rgba(0,212,170,0.3);
+    border: 1px solid rgba(181,80,46,0.3);
     color: var(--accent);
     padding: 0.4rem 1rem;
     border-radius: 20px;
@@ -192,8 +192,8 @@
     gap: 2.5rem;
     margin-bottom: 2.5rem;
     padding: 1.5rem 0;
-    border-top: 1px solid rgba(255,255,255,0.07);
-    border-bottom: 1px solid rgba(255,255,255,0.07);
+    border-top: 1px solid rgba(30,24,18,0.07);
+    border-bottom: 1px solid rgba(30,24,18,0.07);
     flex-wrap: wrap;
   }
 
@@ -222,7 +222,7 @@
 
   .btn-primary {
     background: var(--accent);
-    color: var(--navy);
+    color: var(--bg);
     padding: 0.9rem 2rem;
     border-radius: 8px;
     text-decoration: none;
@@ -235,13 +235,13 @@
 
   .btn-secondary {
     background: transparent;
-    color: var(--white);
+    color: var(--ink);
     padding: 0.9rem 2rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(30,24,18,0.2);
     transition: border-color 0.2s, transform 0.2s;
   }
 
@@ -280,9 +280,9 @@
 
   /* SKILLS */
   .skills-section {
-    background: var(--navy-mid);
-    border-top: 1px solid rgba(255,255,255,0.05);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    background: var(--bg-alt);
+    border-top: 1px solid rgba(30,24,18,0.05);
+    border-bottom: 1px solid rgba(30,24,18,0.05);
     padding: 5rem 4rem;
   }
 
@@ -296,8 +296,8 @@
   }
 
   .skill-group {
-    background: var(--navy);
-    border: 1px solid rgba(255,255,255,0.07);
+    background: var(--bg);
+    border: 1px solid rgba(30,24,18,0.07);
     border-radius: 12px;
     padding: 1.8rem;
   }
@@ -315,21 +315,21 @@
 
   .skill-tag {
     display: inline-block;
-    background: rgba(255,255,255,0.06);
+    background: rgba(30,24,18,0.06);
     color: var(--grey-200);
     padding: 0.35rem 0.85rem;
     border-radius: 20px;
     font-size: 0.85rem;
     margin: 0.25rem;
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(30,24,18,0.08);
   }
 
   /* PROJECTS */
   .projects-grid { display: grid; gap: 2.5rem; }
 
   .project-card {
-    background: var(--navy-mid);
-    border: 1px solid rgba(255,255,255,0.07);
+    background: var(--bg-alt);
+    border: 1px solid rgba(30,24,18,0.07);
     border-radius: 16px;
     overflow: hidden;
     display: grid;
@@ -339,11 +339,11 @@
 
   .project-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(0,212,170,0.25);
+    border-color: rgba(181,80,46,0.25);
   }
 
   .project-image {
-    background: var(--navy-light);
+    background: var(--bg-card);
     overflow: hidden;
     position: relative;
     line-height: 0;
@@ -355,6 +355,7 @@
     display: block;
     position: static;
   }
+
 
   .project-image-placeholder {
     display: flex;
@@ -428,12 +429,12 @@
   }
 
   .tool-tag {
-    background: rgba(46,117,182,0.15);
-    color: var(--blue-light);
+    background: rgba(74,64,56,0.15);
+    color: var(--tag-light);
     padding: 0.3rem 0.75rem;
     border-radius: 20px;
     font-size: 0.8rem;
-    border: 1px solid rgba(46,117,182,0.25);
+    border: 1px solid rgba(74,64,56,0.25);
   }
 
   .project-links { display: flex; gap: 1rem; flex-wrap: wrap; }
@@ -454,9 +455,9 @@
 
   .coming-soon-badge {
     display: inline-block;
-    background: rgba(255,184,48,0.15);
+    background: rgba(156,90,28,0.15);
     color: var(--amber);
-    border: 1px solid rgba(255,184,48,0.3);
+    border: 1px solid rgba(156,90,28,0.3);
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -472,7 +473,7 @@
     position: absolute;
     left: 0; top: 0; bottom: 0;
     width: 2px;
-    background: linear-gradient(to bottom, var(--accent), rgba(0,212,170,0.1));
+    background: linear-gradient(to bottom, var(--accent), rgba(181,80,46,0.1));
   }
 
   .experience-item {
@@ -488,8 +489,8 @@
     width: 10px; height: 10px;
     border-radius: 50%;
     background: var(--accent);
-    border: 2px solid var(--navy);
-    box-shadow: 0 0 0 3px rgba(0,212,170,0.2);
+    border: 2px solid var(--bg);
+    box-shadow: 0 0 0 3px rgba(181,80,46,0.2);
   }
 
   .experience-period {
@@ -525,11 +526,11 @@
     left: 0; top: 0.7rem;
     width: 5px; height: 5px;
     border-radius: 50%;
-    background: var(--blue);
+    background: var(--tag);
   }
 
   /* CONTACT */
-  .contact-section { background: var(--navy-mid); border-top: 1px solid rgba(255,255,255,0.05); }
+  .contact-section { background: var(--bg-alt); border-top: 1px solid rgba(30,24,18,0.05); }
 
   .contact-inner {
     max-width: 1200px;
@@ -549,12 +550,12 @@
   }
 
   .contact-card {
-    background: var(--navy);
-    border: 1px solid rgba(255,255,255,0.07);
+    background: var(--bg);
+    border: 1px solid rgba(30,24,18,0.07);
     border-radius: 12px;
     padding: 1.5rem;
     text-decoration: none;
-    color: var(--white);
+    color: var(--ink);
     transition: transform 0.2s, border-color 0.2s;
     display: flex;
     flex-direction: column;
@@ -562,7 +563,7 @@
     gap: 0.75rem;
   }
 
-  .contact-card:hover { transform: translateY(-4px); border-color: rgba(0,212,170,0.3); }
+  .contact-card:hover { transform: translateY(-4px); border-color: rgba(181,80,46,0.3); }
   .contact-icon { font-size: 1.5rem; }
   .contact-label { font-weight: 600; font-size: 0.95rem; }
   .contact-sub { font-size: 0.8rem; color: var(--grey-400); }
@@ -572,7 +573,11 @@
     padding: 2rem 4rem;
     color: var(--grey-600);
     font-size: 0.85rem;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(30,24,18,0.05);
+  }
+
+  .greeting-strip {
+    padding: 0.6rem 4rem;
   }
 
   /* RESPONSIVE */
@@ -649,23 +654,6 @@
 
     footer { padding: 1.5rem 1.2rem; }
   }
-    .nav-links { display: none; }
-    .hero { padding: 7rem 1.5rem 3rem; }
-    .hero-inner { grid-template-columns: 1fr 140px; gap: 1.5rem; align-items: flex-start; }
-    .hero-photo { width: 140px; aspect-ratio: 3/4; }
-    .hero h1 { font-size: 1.6rem; }
-    .hero-desc { font-size: 0.9rem; }
-    .hero-stats { gap: 1rem; }
-    .hero-stat-num { font-size: 1.3rem; }
-    .hero-stat-label { font-size: 0.65rem; }
-    section { padding: 4rem 1.5rem; }
-    .skills-section { padding: 4rem 1.5rem; }
-    .skills-grid { grid-template-columns: 1fr; }
-
-    .contact-inner { padding: 4rem 1.5rem; }
-    .contact-grid { grid-template-columns: 1fr; max-width: 300px; }
-    footer { padding: 2rem 1.5rem; }
-  }
 </style>
 </head>
 <body>
@@ -683,10 +671,10 @@
 
 
 <!-- GREETING STRIP -->
-<div style="background: rgba(0,212,170,0.1); border-bottom: 1px solid rgba(0,212,170,0.2); padding: 0.6rem 4rem; margin-top: 65px;">
+<div class="greeting-strip" style="background: rgba(181,80,46,0.1); border-bottom: 1px solid rgba(181,80,46,0.2); margin-top: 65px;">
   <p style="font-size: 0.85rem; font-weight: 600; max-width: 1200px; margin: 0 auto; font-family: var(--font-body); display: flex; align-items: center; gap: 0.6rem;">
-    <span style="display:inline-block; width:8px; height:8px; background:#00D4AA; border-radius:50%;"></span>
-    <span style="color: #00D4AA;">Open to opportunities</span>
+    <span style="display:inline-block; width:8px; height:8px; background:#B5502E; border-radius:50%;"></span>
+    <span style="color: #B5502E;">Open to Senior Business Intelligence Analyst and Senior Data Analyst Positions</span>
   </p>
 </div>
 
@@ -696,9 +684,9 @@
 
     <!-- Text side -->
     <div class="hero-text">
-      <h1>Hello, I am <span>Abijah Kabiro</span>,<br>a Data Analyst<br>based in Nairobi, Kenya</h1>
+      <h1>Hello, I am <span>Abijah Kabiro</span>,<br>a Business Intelligence Analyst<br>based in Nairobi, Kenya</h1>
       <p class="hero-desc">
-        For the past four years, I have been solving business problems with data. I have worked across supply chain, logistics, fintech and FMCG, using SQL, Power BI, Advanced Excel, Google Sheets and Python to turn complex data into clear business decisions. My focus is always on understanding the business first before choosing the right tool.
+        Over four years, I've owned analytics for transportation performance at DHL Supply Chain, one of the world's largest logistics operators, turning high-volume operational data into decisions senior stakeholders act on. I lead the full BI lifecycle, from data modelling in SQL to dashboard design and KPI reporting in Power BI, and I've used it to cut report turnaround by 61% and operational costs by 27%. I partner directly with operations and client leadership to translate ambiguous business questions into governance controls and self-service tools that scale across teams.
       </p>
       <div class="hero-stats">
         <div class="hero-stat">
@@ -753,7 +741,6 @@
       <div class="skill-group">
         <div class="skill-group-title">📈 Visualisation</div>
         <span class="skill-tag">Power BI</span>
-        <span class="skill-tag">Google Sheets</span>
         <span class="skill-tag">Excel</span>
         <span class="skill-tag">RLS</span>
         <span class="skill-tag">Dashboard Design</span>
@@ -764,9 +751,9 @@
         <span class="skill-tag">Supply Chain</span>
         <span class="skill-tag">Logistics</span>
         <span class="skill-tag">FMCG</span>
-        <span class="skill-tag">SAP</span>
-        <span class="skill-tag">Oracle</span>
-        <span class="skill-tag">JDA</span>
+        <span class="skill-tag">Digitally Connected Transport (DCT)</span>
+        <span class="skill-tag">Tramm Mobile</span>
+        <span class="skill-tag">Mix Telematics</span>
         <span class="skill-tag">Exception Reporting</span>
       </div>
     </div>
@@ -784,7 +771,7 @@
     <!-- Project 1 -->
     <div class="project-card">
       <div class="project-image">
-        <img src="Supply%20Chain%20Performance%20Dashboard.png" alt="Supply Chain Performance Dashboard" style="width:100%;height:auto;display:block;position:static;">
+        <img src="Supply%20Chain%20Performance%20Dashboard.png" alt="Supply Chain Performance Dashboard">
       </div>
       <div class="project-content">
         <div>
@@ -829,7 +816,7 @@
     <!-- Project 2 -->
     <div class="project-card">
       <div class="project-image">
-        <img src="churnoverview.png" alt="Fidelis National Bank Customer Churn Analysis" style="width:100%;height:auto;display:block;position:static;">
+        <img src="churnoverview.png" alt="Fidelis National Bank Customer Churn Analysis">
       </div>
       <div class="project-content">
         <div>
@@ -874,28 +861,44 @@
     </div>
 
         <!-- Project 3 -->
-    <div class="project-card coming-soon">
+    <div class="project-card">
       <div class="project-image">
-        <div class="project-image-placeholder">
-          <div style="font-size: 3rem;">🔍</div>
-          <span style="font-size: 0.85rem; color: var(--grey-400);">Coming Soon</span>
-        </div>
+        <img src="FinLend%20ExecutiveOverview.png" alt="FinLend Solutions Executive Overview Dashboard">
       </div>
       <div class="project-content">
         <div>
-          <div class="coming-soon-badge">Planned</div>
-          <div class="project-number">Project 03 · Fintech Analytics</div>
-          <h3 class="project-title">FinLend Solutions Mobile Payment Fraud Analysis</h3>
+          <div class="project-number">Project 03 · Fraud Analytics</div>
+          <h3 class="project-title">FinLend Solutions Fraud Analytics</h3>
           <p class="project-desc">
-            Analysis of 250,000 mobile payment transactions for FinLend Solutions, a fictional East African fintech lender. Built to identify fraud patterns, flag high-risk transactions, and give the fraud operations team a Power BI dashboard they can act on every morning.
+            Built an end-to-end Power BI fraud analytics solution for FinLend Solutions, a fictional payments company operating across eight African markets, transforming 250,000 transactions into executive insight on where fraud is concentrated and which controls would have the greatest business impact.
           </p>
+          <div class="project-findings">
+            <div class="project-finding">
+              <span class="finding-dot"></span>
+              <span>Fraud rate rose 39% (2.39% to 3.32%) across $23.87M in transactions, with $917.58K confirmed fraudulent</span>
+            </div>
+            <div class="project-finding">
+              <span class="finding-dot"></span>
+              <span>Crypto Exchange merchants had the highest fraud rate at 10.12%, more than 3x the platform average</span>
+            </div>
+            <div class="project-finding">
+              <span class="finding-dot"></span>
+              <span>Accounts under 30 days old had a 6.23% fraud rate, almost 3x higher than mature accounts</span>
+            </div>
+            <div class="project-finding">
+              <span class="finding-dot"></span>
+              <span>Indexing and query tuning cut logical reads by 85% and query execution time by 46%</span>
+            </div>
+          </div>
           <div class="project-tools">
             <span class="tool-tag">SQL Server</span>
             <span class="tool-tag">Power BI</span>
+            <span class="tool-tag">DAX</span>
+            <span class="tool-tag">Power Query</span>
           </div>
         </div>
         <div class="project-links">
-          <span style="color: var(--grey-400); font-size: 0.9rem;">Available soon</span>
+          <a href="https://medium.com/@abijahkabiro/fraud-was-increasing-business-intelligence-revealed-where-finlend-was-most-exposed-401373f9a1d1" target="_blank" class="project-link">↗ Medium Article</a>
         </div>
       </div>
     </div>
@@ -908,23 +911,24 @@
 
 
 <!-- EXPERIENCE -->
-<div style="background: var(--navy-mid); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+<div style="background: var(--bg-alt); border-top: 1px solid rgba(30,24,18,0.05); border-bottom: 1px solid rgba(30,24,18,0.05);">
   <section id="experience">
     <div class="section-eyebrow">Career</div>
     <h2 class="section-title">Experience</h2>
-    <p class="section-desc">Four years of operational analytics across logistics, supply chain and fintech in Kenya.</p>
+    <p class="section-desc">Four years leading end-to-end BI delivery across logistics and supply chain operations in Kenya.</p>
     <div class="experience-timeline">
       <div class="experience-item">
         <div class="experience-period">Apr 2023 · Present</div>
-        <div class="experience-role">Data Analyst</div>
-        <div class="experience-company">DHL Supply Chain Kenya · Major FMCG Client</div>
+        <div class="experience-role">Business Intelligence Analyst</div>
+        <div class="experience-company">DHL Supply Chain Kenya Limited</div>
         <ul class="experience-bullets">
-          <li>Processed 100,000+ monthly delivery records and produced a weekly performance snapshot shared with management every Wednesday</li>
-          <li>Reduced report turnaround time by 61% through automated SQL reporting pipelines</li>
-          <li>Identified a 27% operational cost reduction opportunity through delivery route and carrier analysis</li>
-          <li>Reduced stakeholder clarification requests by 40% by redesigning reporting formats</li>
-          <li>Produced a Safaricom telecom spend analysis that reduced the telecom budget by approximately 16% through role-based tiering</li>
-          <li>Built a device allocation framework formally adopted into DHL's revised standard operating procedure</li>
+          <li>Own the design, development and governance of 5+ Power BI dashboards tracking transportation KPIs including On-Time Delivery, cost per mile, fleet utilisation, route efficiency and vehicle performance, enabling data-driven decisions for 10+ stakeholders</li>
+          <li>Analyse 100,000+ monthly transportation records from Digitally Connected Transport (DCT), Tramm Mobile, Mix Telematics and SQL databases to surface delivery trends and fleet performance gaps ahead of business impact</li>
+          <li>Drive weekly and monthly performance reporting, investigating KPI variances and advising management and client leadership on corrective action during performance reviews</li>
+          <li>Automated Power BI and Excel reporting workflows, cutting report turnaround time by 61% and scaling self-service analytics adoption across business teams</li>
+          <li>Implemented data governance controls and Power BI Row-Level Security (RLS), reducing data inconsistencies by 37% and strengthening compliant access management</li>
+          <li>Led cost utilisation analysis on transportation communication resources, uncovering inefficient airtime and data bundle allocations and driving a 27% reduction in client operational costs</li>
+          <li>Designed and implemented a device allocation framework formally adopted into the company's revised standard operating procedure</li>
         </ul>
       </div>
       <div class="experience-item">
@@ -932,9 +936,9 @@
         <div class="experience-role">Data Analyst</div>
         <div class="experience-company">FirstCode Corporation Inc.</div>
         <ul class="experience-bullets">
-          <li>Reduced data inconsistencies by 37% through systematic data validation and cleaning processes</li>
-          <li>Reduced report preparation time by 48% by building reusable SQL query templates</li>
-          <li>Built dashboards and reports supporting operational decision-making across the organisation</li>
+          <li>Cut data inconsistencies by 37% by designing systematic data validation and cleaning processes</li>
+          <li>Cut report preparation time by 48% by engineering reusable SQL query templates adopted org-wide</li>
+          <li>Delivered dashboards and reports that powered operational decision-making across the organisation</li>
         </ul>
       </div>
     </div>
@@ -947,7 +951,7 @@
     <div class="section-eyebrow">Contact</div>
     <h2 class="section-title">Get in Touch</h2>
     <p class="section-desc" style="margin: 0 auto;">
-      Open to Data Analyst and BI Analyst roles in fintech, banking, logistics and FMCG.
+      Open to Senior Business Intelligence Analyst and Senior Data Analyst roles in fintech, banking, logistics and FMCG.
     </p>
     <div class="contact-grid">
       <a href="https://www.linkedin.com/in/abijahkabiro/" target="_blank" class="contact-card">
@@ -970,7 +974,7 @@
 </div>
 
 <footer>
-  Abijah Kabiro · Data Analyst · Nairobi, Kenya · 2026
+  Abijah Kabiro · Business Intelligence Analyst · Nairobi, Kenya · 2026
 </footer>
 
 </body>
