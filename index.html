@@ -371,6 +371,89 @@
     position: static;
   }
 
+  /* CAROUSEL: multiple dashboard pages per project, one visible at a time */
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-image .carousel-slide {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .project-image .carousel-slide.active {
+    display: block;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(33,28,24,0.55);
+    color: #fff;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s, background 0.2s;
+    z-index: 2;
+  }
+
+  .carousel:hover .carousel-btn { opacity: 1; }
+  .carousel-btn:hover { background: rgba(33,28,24,0.8); }
+  .carousel-prev { left: 10px; }
+  .carousel-next { right: 10px; }
+
+  .carousel-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 2;
+  }
+
+  .carousel-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.55);
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .carousel-dot.active {
+    background: #fff;
+    transform: scale(1.3);
+  }
+
+  .carousel-page-label {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(33,28,24,0.55);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.55rem;
+    border-radius: 20px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
 
   .project-image-placeholder {
     display: flex;
@@ -802,7 +885,23 @@
     <!-- Project 1 -->
     <div class="project-card">
       <div class="project-image">
-        <img src="FinLend%20ExecutiveOverview.png" alt="FinLend Solutions Executive Overview Dashboard">
+        <div class="carousel">
+          <img src="1_ExecutiveOverview.png" alt="FinLend Solutions dashboard - Executive Overview" class="carousel-slide active">
+          <img src="2_Fraud_Trends.png" alt="FinLend Solutions dashboard - Fraud Trends" class="carousel-slide">
+          <img src="3_Merchant_Risk.png" alt="FinLend Solutions dashboard - Merchant Risk" class="carousel-slide">
+          <img src="4_Geographic_Analysis.png" alt="FinLend Solutions dashboard - Geographic Analysis" class="carousel-slide">
+          <img src="5_Customer_Profiles.png" alt="FinLend Solutions dashboard - Customer Profiles" class="carousel-slide">
+          <button class="carousel-btn carousel-prev" onclick="carouselNav(this,-1)" aria-label="Previous page" type="button">‹</button>
+          <button class="carousel-btn carousel-next" onclick="carouselNav(this,1)" aria-label="Next page" type="button">›</button>
+          <div class="carousel-page-label">1 / 5</div>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" onclick="carouselGo(this,0)" aria-label="Executive Overview" type="button"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Fraud Trends" type="button"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,2)" aria-label="Merchant Risk" type="button"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,3)" aria-label="Geographic Analysis" type="button"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,4)" aria-label="Customer Risk" type="button"></button>
+          </div>
+        </div>
       </div>
 
       <div class="project-content">
@@ -860,7 +959,21 @@
     <!-- Project 2 -->
     <div class="project-card">
       <div class="project-image">
-        <img src="churnoverview.png" alt="Fidelis National Bank Customer Churn Analysis">
+        <div class="carousel">
+          <img src="page1_churnoverview.png" alt="Fidelis National Bank dashboard - Churn Overview" class="carousel-slide active">
+          <img src="page2_who_is_churning.png" alt="Fidelis National Bank dashboard - Who is Churning" class="carousel-slide">
+          <img src="page3_why_churning.png" alt="Fidelis National Bank dashboard - Why is Churning" class="carousel-slide">
+          <img src="page4_model_insights.png" alt="Fidelis National Bank dashboard - Model Insights" class="carousel-slide">
+          <button class="carousel-btn carousel-prev" onclick="carouselNav(this,-1)" aria-label="Previous page" type="button">‹</button>
+          <button class="carousel-btn carousel-next" onclick="carouselNav(this,1)" aria-label="Next page" type="button">›</button>
+          <div class="carousel-page-label">1 / 4</div>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" onclick="carouselGo(this,0)" aria-label="Churn Overview" type="button"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Who is Churning" type="button"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,2)" aria-label="Why are they Churning" type="button"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,3)" aria-label="Model Insights" type="button"></button>
+          </div>
+        </div>
       </div>
 
       <div class="project-content">
@@ -923,7 +1036,17 @@
     <!-- Project 3 -->
     <div class="project-card">
       <div class="project-image">
-        <img src="Supply%20Chain%20Performance%20Dashboard.png" alt="Supply Chain Performance Dashboard">
+        <div class="carousel">
+          <img src="pg1_Performance_Overview.png" alt="Supply Chain dashboard - Performance Overview" class="carousel-slide active">
+          <img src="pg2_Trends_and_Alerts.png" alt="Supply Chain dashboard - Trends and Alerts" class="carousel-slide">
+          <button class="carousel-btn carousel-prev" onclick="carouselNav(this,-1)" aria-label="Previous page" type="button">‹</button>
+          <button class="carousel-btn carousel-next" onclick="carouselNav(this,1)" aria-label="Next page" type="button">›</button>
+          <div class="carousel-page-label">1 / 2</div>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" onclick="carouselGo(this,0)" aria-label="Performance Overview" type="button"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Trends and Alerts" type="button"></button>
+          </div>
+        </div>
       </div>
 
       <div class="project-content">
@@ -1128,6 +1251,55 @@
 <footer>
   Abijah Kabiro · Business Intelligence Analyst · Nairobi, Kenya · 2026
 </footer>
+
+<script>
+  function updateCarouselLabel(carousel) {
+    var slides = carousel.querySelectorAll('.carousel-slide');
+    var label = carousel.querySelector('.carousel-page-label');
+    if (!label) return;
+    var i = 0;
+    slides.forEach(function (s, idx) { if (s.classList.contains('active')) i = idx; });
+    label.textContent = (i + 1) + ' / ' + slides.length;
+  }
+
+  function carouselNav(btn, dir) {
+    var carousel = btn.closest('.carousel');
+    var slides = carousel.querySelectorAll('.carousel-slide');
+    var dots = carousel.querySelectorAll('.carousel-dot');
+    var i = 0;
+    slides.forEach(function (s, idx) { if (s.classList.contains('active')) i = idx; });
+    slides[i].classList.remove('active');
+    if (dots[i]) dots[i].classList.remove('active');
+    i = (i + dir + slides.length) % slides.length;
+    slides[i].classList.add('active');
+    if (dots[i]) dots[i].classList.add('active');
+    updateCarouselLabel(carousel);
+  }
+
+  function carouselGo(dot, index) {
+    var carousel = dot.closest('.carousel');
+    var slides = carousel.querySelectorAll('.carousel-slide');
+    var dots = carousel.querySelectorAll('.carousel-dot');
+    slides.forEach(function (s) { s.classList.remove('active'); });
+    dots.forEach(function (d) { d.classList.remove('active'); });
+    slides[index].classList.add('active');
+    if (dots[index]) dots[index].classList.add('active');
+    updateCarouselLabel(carousel);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.carousel').forEach(function (carousel) {
+      var slides = carousel.querySelectorAll('.carousel-slide');
+      if (slides.length <= 1) {
+        carousel.querySelectorAll('.carousel-btn, .carousel-dots, .carousel-page-label').forEach(function (el) {
+          el.style.display = 'none';
+        });
+      } else {
+        updateCarouselLabel(carousel);
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
