@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abijah Kabiro Business Intelligence Analyst Portfolio</title>
+<title>Abijah Kabiro | Data Analyst - SQL, Power BI, Analytics</title>
+<meta name="description" content="Abijah Kabiro, Data Analyst in Nairobi, Kenya. Business problem framing, SQL, dimensional modelling, data quality and Power BI reporting, shown through detailed analytical case studies.">
+<meta property="og:title" content="Abijah Kabiro | Data Analyst">
+<meta property="og:description" content="Data Analyst working across business problem framing, SQL, dimensional modelling, data quality and Power BI reporting.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -334,10 +339,12 @@
 }
 
 /* Responsive Skills Layout */
-@media (max-width: 900px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 1100px) {
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .skills-grid { grid-template-columns: 1fr; }
 }
   /* PROJECTS */
   .projects-grid { display: grid; gap: 2.5rem; }
@@ -409,7 +416,12 @@
     z-index: 2;
   }
 
-  .carousel:hover .carousel-btn { opacity: 1; }
+  .carousel:hover .carousel-btn,
+  .carousel-btn:focus-visible { opacity: 1; }
+
+  @media (hover: none) {
+    .carousel-btn { opacity: 1; }
+  }
   .carousel-btn:hover { background: rgba(33,28,24,0.8); }
   .carousel-prev { left: 10px; }
   .carousel-next { right: 10px; }
@@ -703,9 +715,78 @@
 
   .greeting-strip {
     padding: 0.6rem 4rem;
+    margin-top: 65px;
+    background: rgba(181,80,46,0.1);
+    border-bottom: 1px solid rgba(181,80,46,0.2);
   }
 
-  /* RESPONSIVE */
+  .greeting-strip p {
+    font-size: 0.85rem;
+    font-weight: 600;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .greeting-dot {
+    display: inline-block;
+    width: 8px; height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* TEXT SAFETY */
+  h1, h2, h3, p, li, span { overflow-wrap: break-word; }
+
+  /* PROJECT CASE-STUDY BLOCKS */
+  .project-note {
+    display: inline-block;
+    background: rgba(156,90,28,0.12);
+    color: var(--amber);
+    border: 1px solid rgba(156,90,28,0.3);
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.9rem;
+  }
+
+  .project-block { margin-bottom: 1.35rem; }
+
+  .project-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--tag-light);
+    margin-bottom: 0.4rem;
+  }
+
+  .project-block p {
+    color: var(--grey-200);
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .project-meaning {
+    border-left: 3px solid var(--accent);
+    background: rgba(181,80,46,0.05);
+    padding: 0.9rem 1rem;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 1.35rem;
+  }
+
+  .project-meaning .project-label { color: var(--accent); }
+  .project-meaning p { color: var(--ink); }
+
+  .project-limitation p { color: var(--grey-400); font-size: 0.88rem; }
+
+/* RESPONSIVE */
   @media (max-width: 1024px) and (min-width: 769px) {
     .hero-inner {
       grid-template-columns: 1fr;
@@ -769,6 +850,8 @@
 
     /* PROJECTS */
     .projects-grid { gap: 1.5rem; }
+    .project-content { padding: 1.5rem 1.2rem; }
+    .project-title { font-size: 1.25rem; }
 
     /* EXPERIENCE */
     .experience-timeline { padding-left: 1.2rem; }
@@ -794,7 +877,7 @@
 <nav>
   <a href="#" class="nav-logo">Abijah Kabiro<span>.</span></a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
@@ -803,11 +886,8 @@
 
 
 <!-- GREETING STRIP -->
-<div class="greeting-strip" style="background: rgba(181,80,46,0.1); border-bottom: 1px solid rgba(181,80,46,0.2); margin-top: 65px;">
-  <p style="font-size: 0.85rem; font-weight: 600; max-width: 1200px; margin: 0 auto; font-family: var(--font-body); display: flex; align-items: center; gap: 0.6rem;">
-    <span style="display:inline-block; width:8px; height:8px; background:#B5502E; border-radius:50%;"></span>
-    <span style="color: #B5502E;">Open to Senior Data Analyst Opportunities</span>
-  </p>
+<div class="greeting-strip">
+  <p><span class="greeting-dot" aria-hidden="true"></span><span>Open to Senior Data Analyst &amp; Senior BI Analyst Opportunities</span></p>
 </div>
 
 <!-- HERO -->
@@ -816,86 +896,110 @@
 
     <!-- Text side -->
     <div class="hero-text">
-      <h1>Hello, I am Abijah Kabiro, a Business Intelligence Analyst based in Nairobi, Kenya</h1>
+      <h1>Hello, I am Abijah Kabiro, a <span>Data Analyst</span> based in Nairobi, Kenya.</h1>
       <p class="hero-desc">
-        Over four years, I have delivered analytics and reporting solutions for operations, transforming high-volume operational data into insights that support stakeholder decision-making. I design end-to-end analytics solutions across SQL, dimensional modelling, and Power BI, developing KPI frameworks, executive dashboards, and governed reporting environments that improve operational visibility. My work has contributed to a 61% reduction in report turnaround time and a 27% reduction in operational costs through data-driven process improvements.
+        I start with the business question rather than the tool. I frame the problem with the people who own it,
+        profile and validate the data before trusting it, investigate where the pattern actually sits, and translate
+        what I find into KPIs, reporting and recommendations people can act on. Day to day that means SQL,
+        dimensional modelling, data quality work, DAX and Power BI - in service of a decision, not a dashboard.
       </p>
       <div class="hero-stats">
         <div class="hero-stat">
           <span class="hero-stat-num">4+</span>
-          <span class="hero-stat-label">Years Experience</span>
+          <span class="hero-stat-label">Years in analytics</span>
         </div>
         <div class="hero-stat">
           <span class="hero-stat-num">61%</span>
-          <span class="hero-stat-label">Report Time Saved</span>
+          <span class="hero-stat-label">Report turnaround reduced</span>
         </div>
         <div class="hero-stat">
           <span class="hero-stat-num">27%</span>
-          <span class="hero-stat-label">Cost Reduction</span>
+          <span class="hero-stat-label">Operational cost reduction</span>
         </div>
         <div class="hero-stat">
           <span class="hero-stat-num">100K+</span>
-          <span class="hero-stat-label">Monthly Records Analysed</span>
+          <span class="hero-stat-label">Monthly records analysed</span>
         </div>
       </div>
       <div class="hero-buttons">
-        <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="https://github.com/Abijahkabiro" target="_blank" class="btn-secondary">GitHub</a>
-        <a href="https://www.linkedin.com/in/abijahkabiro/" target="_blank" class="btn-secondary">LinkedIn</a>
-        <a href="https://www.instagram.com/abijahtheanalyst/" target="_blank" class="btn-secondary">Instagram</a>
-        <a href="https://www.tiktok.com/@abijahtheanalyst" target="_blank" class="btn-secondary">TikTok</a>
+        <a href="#projects" class="btn-primary">View case studies</a>
+        <a href="https://github.com/Abijahkabiro" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub</a>
+        <a href="https://www.linkedin.com/in/abijahkabiro/" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn</a>
+        <a href="https://www.instagram.com/abijahtheanalyst/" target="_blank" rel="noopener noreferrer" class="btn-secondary">Instagram</a>
+        <a href="https://www.tiktok.com/@abijahtheanalyst" target="_blank" rel="noopener noreferrer" class="btn-secondary">TikTok</a>
       </div>
     </div>
 
     <!-- Photo side -->
     <div class="hero-photo">
-      <img src="abijah.jpg" alt="Abijah Kabiro">
+      <img src="abijah.jpg" alt="Portrait of Abijah Kabiro, Data Analyst based in Nairobi, Kenya">
     </div>
 
   </div>
 </div>
 
 <!-- SKILLS -->
-<div class="skills-section" id="about">
+<div class="skills-section" id="skills">
   <div class="skills-inner">
-    <div class="section-eyebrow">Skills and Tools</div>
-    <h2 class="section-title">What I Work With</h2>
-    <p class="section-desc" style="max-width: 1100px;">End-to-end analytics workflow covering data preparation, dimensional modelling, KPI development, enterprise reporting, and governed Power BI solutions.</p>
+    <div class="section-eyebrow">Capabilities</div>
+    <h2 class="section-title">How I Work</h2>
+    <p class="section-desc" style="max-width: 1100px;">Grouped by what I do rather than by software: framing the question, checking whether the data can answer it, modelling it properly, and reporting it in a way that holds up in front of stakeholders.</p>
     <div class="skills-grid">
 
   <div class="skill-group">
-    <div class="skill-group-title"> Analysis</div>
-    <span class="skill-tag">SQL Server</span>
-    <span class="skill-tag">T-SQL</span>
-    <span class="skill-tag">Data Transformation</span>
+    <h3 class="skill-group-title">Analytics</h3>
+    <span class="skill-tag">SQL</span>
+    <span class="skill-tag">Exploratory Analysis</span>
+    <span class="skill-tag">Segmentation</span>
+    <span class="skill-tag">Trend Analysis</span>
+    <span class="skill-tag">Root-Cause Analysis</span>
+    <span class="skill-tag">Hypothesis Testing</span>
+  </div>
+
+  <div class="skill-group">
+    <h3 class="skill-group-title">Business Intelligence</h3>
+    <span class="skill-tag">Power BI</span>
+    <span class="skill-tag">DAX</span>
+    <span class="skill-tag">KPI Development</span>
+    <span class="skill-tag">Dashboard Design</span>
+    <span class="skill-tag">Executive Reporting</span>
+    <span class="skill-tag">Exception Reporting</span>
+  </div>
+
+  <div class="skill-group">
+    <h3 class="skill-group-title">Data</h3>
     <span class="skill-tag">Data Profiling</span>
     <span class="skill-tag">Data Cleaning</span>
-    <span class="skill-tag">Python</span>
-    <span class="skill-tag">DAX</span>
-    <span class="skill-tag">Power Query</span>
-  </div>
-
-  <div class="skill-group">
-    <div class="skill-group-title"> Reporting & Visualization</div>
-    <span class="skill-tag">Power BI</span>
-    <span class="skill-tag">Power BI Service Administration</span>
-    <span class="skill-tag">Executive Reporting</span>
-    <span class="skill-tag">Dashboard Design</span>
-    <span class="skill-tag">KPI Reporting</span>
-    <span class="skill-tag">Self-Service Analytics</span>
-    <span class="skill-tag">Row-Level Security (RLS)</span>
-  </div>
-
-  <div class="skill-group">
-    <div class="skill-group-title"> BI Architecture</div>
+    <span class="skill-tag">Data Quality</span>
+    <span class="skill-tag">Data Validation</span>
     <span class="skill-tag">Dimensional Modelling</span>
-    <span class="skill-tag">Star Schema Design</span>
-    <span class="skill-tag">Data Warehousing Concepts</span>
-    <span class="skill-tag">Data Governance</span>
-    <span class="skill-tag">Data Quality Management</span>
-    <span class="skill-tag">SQL Optimization</span>
-    <span class="skill-tag">Business Requirements</span>
-    <span class="skill-tag">Git-based BI Development</span>
+    <span class="skill-tag">Star Schema</span>
+  </div>
+
+  <div class="skill-group">
+    <h3 class="skill-group-title">Advanced Analytics</h3>
+    <span class="skill-tag">Python</span>
+    <span class="skill-tag">Statistical Analysis</span>
+    <span class="skill-tag">Logistic Regression</span>
+    <span class="skill-tag">Predictive Modelling</span>
+    <span class="skill-tag">Model Evaluation</span>
+  </div>
+
+  <div class="skill-group">
+    <h3 class="skill-group-title">Governance</h3>
+    <span class="skill-tag">Row-Level Security</span>
+    <span class="skill-tag">Access Control</span>
+    <span class="skill-tag">Data Quality</span>
+    <span class="skill-tag">Responsible Data Use</span>
+  </div>
+
+  <div class="skill-group">
+    <h3 class="skill-group-title">Business</h3>
+    <span class="skill-tag">Business Problem Framing</span>
+    <span class="skill-tag">Stakeholder Thinking</span>
+    <span class="skill-tag">Operational Analysis</span>
+    <span class="skill-tag">Decision Support</span>
+    <span class="skill-tag">Recommendations</span>
   </div>
   </div>
   </div>
@@ -903,234 +1007,210 @@
 
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="section-eyebrow">Portfolio</div>
+  <div class="section-eyebrow">Case studies</div>
   <h2 class="section-title">Projects</h2>
-  <p class="section-desc" style="max-width: 900px;">Each project starts with a business problem. I build Business Intelligence solutions that transform raw data into insights, reporting frameworks, and decisions that improve business performance.</p>
+  <p class="section-desc" style="max-width: 900px;">Three case studies, each written the way I work: the business problem, how I investigated it, what the data actually said, and what should be done about it. Risk and BI, operations and BI, then customer and predictive analytics.</p>
 
   <div class="projects-grid">
 
-
-    <!-- Project 1 -->
+    <!-- Project 01 -->
     <div class="project-card">
       <div class="project-image">
         <div class="carousel">
-          <img src="1_ExecutiveOverview.png" alt="FinLend Solutions dashboard - Executive Overview" class="carousel-slide active">
-          <img src="2_Fraud_Trends.png" alt="FinLend Solutions dashboard - Fraud Trends" class="carousel-slide">
-          <img src="3_Merchant_Risk.png" alt="FinLend Solutions dashboard - Merchant Risk" class="carousel-slide">
-          <img src="4_Geographic_Analysis.png" alt="FinLend Solutions dashboard - Geographic Analysis" class="carousel-slide">
-          <img src="5_Customer_Profiles.png" alt="FinLend Solutions dashboard - Customer Profiles" class="carousel-slide">
-          <button class="carousel-btn carousel-prev" onclick="carouselNav(this,-1)" aria-label="Previous page" type="button">‹</button>
-          <button class="carousel-btn carousel-next" onclick="carouselNav(this,1)" aria-label="Next page" type="button">›</button>
+          <img src="1_ExecutiveOverview.png" alt="FinLend fraud analytics Power BI report - executive overview page" class="carousel-slide active">
+          <img src="2_Fraud_Trends.png" alt="FinLend fraud analytics Power BI report - fraud trends over time" class="carousel-slide">
+          <img src="3_Merchant_Risk.png" alt="FinLend fraud analytics Power BI report - merchant category risk" class="carousel-slide">
+          <img src="4_Geographic_Analysis.png" alt="FinLend fraud analytics Power BI report - geographic analysis" class="carousel-slide">
+          <img src="5_Customer_Profiles.png" alt="FinLend fraud analytics Power BI report - customer risk profiles" class="carousel-slide">
+          <button class="carousel-btn carousel-prev" onclick="carouselNav(this,-1)" aria-label="Previous report page" type="button">&lsaquo;</button>
+          <button class="carousel-btn carousel-next" onclick="carouselNav(this,1)" aria-label="Next report page" type="button">&rsaquo;</button>
           <div class="carousel-page-label">1 / 5</div>
           <div class="carousel-dots">
-            <button class="carousel-dot active" onclick="carouselGo(this,0)" aria-label="Executive Overview" type="button"></button>
-            <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Fraud Trends" type="button"></button>
-            <button class="carousel-dot" onclick="carouselGo(this,2)" aria-label="Merchant Risk" type="button"></button>
-            <button class="carousel-dot" onclick="carouselGo(this,3)" aria-label="Geographic Analysis" type="button"></button>
-            <button class="carousel-dot" onclick="carouselGo(this,4)" aria-label="Customer Risk" type="button"></button>
+            <button class="carousel-dot active" onclick="carouselGo(this,0)" aria-label="Executive overview" type="button"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Fraud trends" type="button"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,2)" aria-label="Merchant risk" type="button"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,3)" aria-label="Geographic analysis" type="button"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,4)" aria-label="Customer risk profiles" type="button"></button>
           </div>
         </div>
       </div>
 
       <div class="project-content">
         <div>
-          <div class="project-number">Project 01 · Fraud Analytics</div>
+          <div class="project-number">Project 01 &middot; Risk &amp; BI</div>
+          <h3 class="project-title">FinLend Fraud Analytics</h3>
+          <span class="project-note">Synthetic case study &middot; FinLend is a fictional company</span>
 
-          <h3 class="project-title">FinLend Solutions Fraud Analytics</h3>
+          <div class="project-block">
+            <div class="project-label">Business problem</div>
+            <p>A synthetic African fintech was losing more to fraud each quarter but could not say where the exposure sat, so controls were being applied to everyone instead of to the risk. 250,000 transactions worth $23.87M were available and largely unexamined.</p>
+          </div>
 
-          <p class="project-desc">
-            Designed an end-to-end fraud analytics platform for a fictional digital payments company, transforming 250,000 transactions into executive reporting, fraud intelligence, and business recommendations.
-          </p>
+          <div class="project-block">
+            <div class="project-label">Investigation</div>
+            <p>Profiled and quality-checked the raw transactions, staged and transformed them, then built a star schema in SQL Server for merchant, geography, account-age and time-of-day analysis. Segmented risk rather than looking at a single fraud rate, and tuned the heavy queries: 85% fewer logical reads, 45% less CPU, 46% faster elapsed time. Delivered in Power BI with DAX measures and Row-Level Security.</p>
+          </div>
 
-          <div class="project-findings">
+          <div class="project-block">
+            <div class="project-label">Key findings</div>
+            <p>Fraud rose from 2.39% in Q1 to 3.32% in the final quarter, a 39% increase, totalling $917.58K in fraudulent value. The exposure was concentrated: Crypto Exchange merchants at 10.12%, accounts under 30 days old at 6.23%, IP-country mismatches at 6.49% against 2.75% when country matched, and 12am-5am transactions at 5.59%.</p>
+          </div>
 
-            <div class="project-finding">
-              <span class="finding-dot"></span>
-              <span>Fraud exposure increased by 39%, rising from 2.39% to 3.32% across $23.87M in transaction value, with $917.58K in confirmed fraudulent transactions identified</span>
-            </div>
+          <div class="project-meaning">
+            <div class="project-label">Why it matters</div>
+            <p>The rise was not general - it lived in a handful of identifiable segments, so risk controls can be targeted at new accounts, crypto merchants, mismatched geographies and overnight activity instead of adding friction across the whole customer base.</p>
+          </div>
 
-            <div class="project-finding">
-              <span class="finding-dot"></span>
-              <span>Crypto Exchange merchants recorded the highest fraud rate at 10.12%, more than three times the platform average</span>
-            </div>
-
-            <div class="project-finding">
-              <span class="finding-dot"></span>
-              <span>Accounts under 30 days old recorded a 6.23% fraud rate, almost three times higher than established customer segments</span>
-            </div>
-
-            <div class="project-finding">
-              <span class="finding-dot"></span>
-              <span>SQL optimization through indexing and query tuning reduced logical reads by 85% and improved execution time by 46%</span>
-            </div>
-
+          <div class="project-block project-limitation">
+            <p>Scope note: this is an analytical case study on synthetic data, not a production fraud detection system.</p>
           </div>
 
           <div class="project-tools">
             <span class="tool-tag">SQL Server</span>
+            <span class="tool-tag">T-SQL</span>
+            <span class="tool-tag">Star Schema</span>
             <span class="tool-tag">Power BI</span>
             <span class="tool-tag">DAX</span>
             <span class="tool-tag">Power Query</span>
+            <span class="tool-tag">Row-Level Security</span>
           </div>
-
         </div>
 
-       <div class="project-links">
-        <a href="https://github.com/Abijahkabiro/finlend_fraud_analysis" target="_blank" class="project-link">↗ GitHub Repository</a>
-        <a href="https://medium.com/@abijahkabiro/fraud-was-increasing-business-intelligence-revealed-where-finlend-was-most-exposed-401373f9a1d1" target="_blank" class="project-link">↗ Medium Article</a>
-       </div>
-
+        <div class="project-links">
+          <a href="https://github.com/Abijahkabiro/finlend_fraud_analysis" target="_blank" rel="noopener noreferrer" class="project-link">&#8599; GitHub repository</a>
+          <a href="https://medium.com/@abijahkabiro/fraud-was-increasing-business-intelligence-revealed-where-finlend-was-most-exposed-401373f9a1d1" target="_blank" rel="noopener noreferrer" class="project-link">&#8599; Full write-up</a>
+        </div>
       </div>
     </div>
 
-
-    <!-- Project 2 -->
+    <!-- Project 02 -->
     <div class="project-card">
       <div class="project-image">
         <div class="carousel">
-          <img src="page1_churnoverview.png" alt="Fidelis National Bank dashboard - Churn Overview" class="carousel-slide active">
-          <img src="page2_who_is_churning.png" alt="Fidelis National Bank dashboard - Who is Churning" class="carousel-slide">
-          <img src="page3_why_churning.png" alt="Fidelis National Bank dashboard - Why is Churning" class="carousel-slide">
-          <img src="page4_model_insights.png" alt="Fidelis National Bank dashboard - Model Insights" class="carousel-slide">
-          <button class="carousel-btn carousel-prev" onclick="carouselNav(this,-1)" aria-label="Previous page" type="button">‹</button>
-          <button class="carousel-btn carousel-next" onclick="carouselNav(this,1)" aria-label="Next page" type="button">›</button>
-          <div class="carousel-page-label">1 / 4</div>
+          <img src="pg1_Performance_Overview.png" alt="Supply chain delay analysis report - delivery performance overview" class="carousel-slide active">
+          <img src="pg2_Trends_and_Alerts.png" alt="Supply chain delay analysis report - trends and weekly exception alerts" class="carousel-slide">
+          <button class="carousel-btn carousel-prev" onclick="carouselNav(this,-1)" aria-label="Previous report page" type="button">&lsaquo;</button>
+          <button class="carousel-btn carousel-next" onclick="carouselNav(this,1)" aria-label="Next report page" type="button">&rsaquo;</button>
+          <div class="carousel-page-label">1 / 2</div>
           <div class="carousel-dots">
-            <button class="carousel-dot active" onclick="carouselGo(this,0)" aria-label="Churn Overview" type="button"></button>
-            <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Who is Churning" type="button"></button>
-            <button class="carousel-dot" onclick="carouselGo(this,2)" aria-label="Why are they Churning" type="button"></button>
-            <button class="carousel-dot" onclick="carouselGo(this,3)" aria-label="Model Insights" type="button"></button>
+            <button class="carousel-dot active" onclick="carouselGo(this,0)" aria-label="Performance overview" type="button"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Trends and alerts" type="button"></button>
           </div>
         </div>
       </div>
 
       <div class="project-content">
-
         <div>
+          <div class="project-number">Project 02 &middot; Operations &amp; BI</div>
+          <h3 class="project-title">Supply Chain Delay Analysis</h3>
 
-          <div class="project-number">Project 02 · Banking Analytics</div>
+          <div class="project-block">
+            <div class="project-label">Business problem</div>
+            <p>More than half of deliveries were arriving late across 180,519 orders, three years, 23 regions, 4 shipping modes and 50 product categories - but no one could say whether the cause was seasonal, regional or structural, so there was nothing specific to fix.</p>
+          </div>
 
+          <div class="project-block">
+            <div class="project-label">Investigation</div>
+            <p>Profiled first: delivery-day fields carried the wrong data type and had to be corrected before any delay measure was trustworthy, and Same Day records showed a data and system configuration issue that distorts delay measurement, so they were treated separately. Then tested the obvious explanations - season, region, category - before testing shipping mode against its promised service level.</p>
+          </div>
+
+          <div class="project-block">
+            <div class="project-label">Key findings</div>
+            <p>57.8% of deliveries were late. Regional late rates clustered tightly between 52.6% and 62.2% and there was no meaningful seasonal pattern, which ruled out geography and demand as the driver. First Class was late on 100% of 27,814 orders, while the cheapest option, Standard Class, was the strongest at 39.8%.</p>
+          </div>
+
+          <div class="project-meaning">
+            <div class="project-label">Why it matters</div>
+            <p>A 100% late rate is not an operations failure - it is a definition failure. The First Class SLA promised a transit time the carrier never achieved, making this a contractual and service-definition problem rather than a routing one. The action is to renegotiate or restate the service promise, and to run a weekly exception report so operations work the few genuinely abnormal lanes instead of a list where everything is red.</p>
+          </div>
+
+          <div class="project-tools">
+            <span class="tool-tag">SQL Server</span>
+            <span class="tool-tag">Data Profiling</span>
+            <span class="tool-tag">Power BI</span>
+            <span class="tool-tag">DAX</span>
+            <span class="tool-tag">Google Sheets</span>
+            <span class="tool-tag">Exception Reporting</span>
+          </div>
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/Abijahkabiro/Supply_chain_delay_analysis" target="_blank" rel="noopener noreferrer" class="project-link">&#8599; GitHub repository</a>
+          <a href="https://docs.google.com/spreadsheets/d/11WScYkRSGapPfTlJoQ433jA0oXYXpSJQXd4qfvKiixY/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">&#8599; Live report</a>
+          <a href="https://medium.com/@abijahkabiro/when-more-than-half-your-deliveries-are-late-the-data-has-something-to-say-7bc40d995d18" target="_blank" rel="noopener noreferrer" class="project-link">&#8599; Full write-up</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 03 -->
+    <div class="project-card">
+      <div class="project-image">
+        <div class="carousel">
+          <img src="page1_churnoverview.png" alt="Fidelis National Bank churn report - churn overview page" class="carousel-slide active">
+          <img src="page2_who_is_churning.png" alt="Fidelis National Bank churn report - who is churning" class="carousel-slide">
+          <img src="page3_why_churning.png" alt="Fidelis National Bank churn report - why customers churn" class="carousel-slide">
+          <img src="page4_model_insights.png" alt="Fidelis National Bank churn report - model insights and evaluation" class="carousel-slide">
+          <button class="carousel-btn carousel-prev" onclick="carouselNav(this,-1)" aria-label="Previous report page" type="button">&lsaquo;</button>
+          <button class="carousel-btn carousel-next" onclick="carouselNav(this,1)" aria-label="Next report page" type="button">&rsaquo;</button>
+          <div class="carousel-page-label">1 / 4</div>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" onclick="carouselGo(this,0)" aria-label="Churn overview" type="button"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Who is churning" type="button"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,2)" aria-label="Why customers churn" type="button"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,3)" aria-label="Model insights" type="button"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-content">
+        <div>
+          <div class="project-number">Project 03 &middot; Customer &amp; Predictive Analytics</div>
           <h3 class="project-title">Fidelis National Bank Customer Churn Analysis</h3>
+          <span class="project-note">Portfolio case study &middot; not employment at a bank</span>
 
-          <p class="project-desc">
-            Analyzed 10,000 banking customers to identify churn drivers, understand retention risks, and develop recommendations supported by predictive analytics and Business Intelligence reporting.
-          </p>
+          <div class="project-block">
+            <div class="project-label">Business problem</div>
+            <p>One in five customers was leaving. The bank needed to know who was leaving, whether the leavers were worth keeping, and whether churn could be anticipated early enough to act on.</p>
+          </div>
 
-          <div class="project-findings">
+          <div class="project-block">
+            <div class="project-label">Investigation</div>
+            <p>Segmented 10,000 customers by geography, age, balance, product holdings and activity, then fitted a logistic regression to test which factors held up together and reported it in Power BI across overview, who, why and model pages.</p>
+          </div>
 
-            <div class="project-finding">
-              <span class="finding-dot"></span>
-              <span>Identified a 20.4% overall churn rate, showing that approximately one in five customers had exited the bank</span>
-            </div>
+          <div class="project-block">
+            <div class="project-label">Key findings</div>
+            <p>Overall churn was 20.37%, concentrated in Germany at 32.4% and among customers aged 50-60 at 56.2%. Leavers held higher balances on average ($91,108 vs $72,745). Product holdings were the sharpest signal - 82.7% churn at three products and 100% at four - and inactive members churned at 26.9% against 14.3% for active ones. Age was the strongest positive coefficient; active membership was strongly protective.</p>
+          </div>
 
-            <div class="project-finding">
-              <span class="finding-dot"></span>
-              <span>Churned customers maintained higher average balances ($91,108) compared with retained customers ($72,745), highlighting the risk of losing higher-value customers</span>
-            </div>
+          <div class="project-meaning">
+            <div class="project-label">Why it matters</div>
+            <p>The bank was losing its higher-balance customers, not its marginal ones, and the strongest levers are re-activating dormant members and reviewing what happens when a customer is sold a third or fourth product.</p>
+          </div>
 
-            <div class="project-finding">
-              <span class="finding-dot"></span>
-              <span>Customers with four products recorded a 100% churn rate, indicating potential issues with product adoption and customer experience</span>
-            </div>
-
-            <div class="project-finding">
-              <span class="finding-dot"></span>
-              <span>Age and active membership status emerged as key predictors of customer churn</span>
-            </div>
-
+          <div class="project-block project-limitation">
+            <div class="project-label">Limitation, stated plainly</div>
+            <p>The model reached 81.1% accuracy but only 20% recall on churners - with roughly a fifth of customers churning, accuracy mostly rewards predicting "stays". It missed four out of five of the customers the business actually wants to catch, so it is not fit for targeting retention spend as it stands. The segment findings should drive action; the model needs class-imbalance handling and threshold tuning, evaluated on recall and precision, before anyone relies on it.</p>
           </div>
 
           <div class="project-tools">
             <span class="tool-tag">Python</span>
-            <span class="tool-tag">Power BI</span>
-            <span class="tool-tag">Scikit-learn</span>
             <span class="tool-tag">Pandas</span>
-            <span class="tool-tag">DAX</span>
-            <span class="tool-tag">Google Colab</span>
-          </div>
-
-        </div>
-
-        <div class="project-links">
-          <a href="https://github.com/Abijahkabiro/bank-customer-churn-analysis" target="_blank" class="project-link">↗ GitHub Repository</a>
-          <a href="https://colab.research.google.com/drive/1zV3grp02eUZmxhMrB4l0a8n168vSCnuX#scrollTo=mTuUa19jhtWB" target="_blank" class="project-link">↗ Google Colab</a>
-          <a href="https://medium.com/@abijahkabiro/bank-churn-ecbb7e2757ab" target="_blank" class="project-link">↗ Medium Article</a>
-        </div>
-
-      </div>
-    </div>
-
-
-    <!-- Project 3 -->
-    <div class="project-card">
-      <div class="project-image">
-        <div class="carousel">
-          <img src="pg1_Performance_Overview.png" alt="Supply Chain dashboard - Performance Overview" class="carousel-slide active">
-          <img src="pg2_Trends_and_Alerts.png" alt="Supply Chain dashboard - Trends and Alerts" class="carousel-slide">
-          <button class="carousel-btn carousel-prev" onclick="carouselNav(this,-1)" aria-label="Previous page" type="button">‹</button>
-          <button class="carousel-btn carousel-next" onclick="carouselNav(this,1)" aria-label="Next page" type="button">›</button>
-          <div class="carousel-page-label">1 / 2</div>
-          <div class="carousel-dots">
-            <button class="carousel-dot active" onclick="carouselGo(this,0)" aria-label="Performance Overview" type="button"></button>
-            <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Trends and Alerts" type="button"></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-content">
-
-        <div>
-
-          <div class="project-number">Project 03 · Supply Chain Analytics</div>
-
-          <h3 class="project-title">Supply Chain Delay Pattern Detector</h3>
-
-          <p class="project-desc">
-            Analyzed 180,519 delivery records to identify operational bottlenecks, uncover delay drivers, and build a reporting solution that helps operations teams prioritize corrective action.
-          </p>
-
-          <div class="project-findings">
-
-            <div class="project-finding">
-              <span class="finding-dot"></span>
-              <span>57.8% of deliveries arrived late across three years of operational data, highlighting a significant network performance challenge</span>
-            </div>
-
-            <div class="project-finding">
-              <span class="finding-dot"></span>
-              <span>First Class shipping recorded a 100% late delivery rate across all 22 regions, indicating a structural service performance issue</span>
-            </div>
-
-            <div class="project-finding">
-              <span class="finding-dot"></span>
-              <span>Standard Class, the lowest-cost shipping option, delivered the strongest performance with the lowest late delivery rate at 39.8%</span>
-            </div>
-
-            <div class="project-finding">
-              <span class="finding-dot"></span>
-              <span>No seasonal pattern was identified, suggesting delays were driven by operational factors rather than demand fluctuations</span>
-            </div>
-
-          </div>
-
-          <div class="project-tools">
-            <span class="tool-tag">SQL Server</span>
+            <span class="tool-tag">Scikit-learn</span>
+            <span class="tool-tag">Logistic Regression</span>
+            <span class="tool-tag">Model Evaluation</span>
             <span class="tool-tag">Power BI</span>
-            <span class="tool-tag">Google Sheets</span>
             <span class="tool-tag">DAX</span>
           </div>
-
         </div>
 
         <div class="project-links">
-          <a href="https://github.com/Abijahkabiro/Supply_chain_delay_analysis" target="_blank" class="project-link">↗ GitHub Repository</a>
-          <a href="https://docs.google.com/spreadsheets/d/11WScYkRSGapPfTlJoQ433jA0oXYXpSJQXd4qfvKiixY/edit?usp=sharing" target="_blank" class="project-link">↗ Live Report</a>
-          <a href="https://medium.com/@abijahkabiro/when-more-than-half-your-deliveries-are-late-the-data-has-something-to-say-7bc40d995d18" target="_blank" class="project-link">↗ Medium Article</a>
+          <a href="https://github.com/Abijahkabiro/bank-customer-churn-analysis" target="_blank" rel="noopener noreferrer" class="project-link">&#8599; GitHub repository</a>
+          <a href="https://colab.research.google.com/drive/1zV3grp02eUZmxhMrB4l0a8n168vSCnuX#scrollTo=mTuUa19jhtWB" target="_blank" rel="noopener noreferrer" class="project-link">&#8599; Google Colab</a>
+          <a href="https://medium.com/@abijahkabiro/bank-churn-ecbb7e2757ab" target="_blank" rel="noopener noreferrer" class="project-link">&#8599; Full write-up</a>
         </div>
-
       </div>
     </div>
-
 
   </div>
 </section>
@@ -1143,125 +1223,64 @@
     <h2 class="section-title">Experience</h2>
 
     <p class="section-desc experience-desc">
-      Four years delivering analytics, reporting, and decision-support solutions across logistics, supply chain operations, and business performance reporting.
+      Four years of analytics, reporting and decision support across logistics, supply chain operations and business performance reporting.
     </p>
 
-        <div class="experience-timeline">
+    <div class="experience-timeline">
 
       <div class="experience-item">
 
-        <div class="experience-period">Jul 2026 · Present</div>
-
-        <div class="experience-role">Founder / Lead, Data & Technology</div>
-
+        <div class="experience-period">Jul 2026 &middot; Present</div>
+        <h3 class="experience-role">Founder / Lead, Data &amp; Technology</h3>
         <div class="experience-company">THINDA</div>
 
         <p class="experience-description">
-          Building THINDA, a data education and analytics company focused on making data practical.
-          Our goal is to help aspiring data professionals develop real-world analytics skills while helping organizations make better decisions through data.
+          THINDA is a data education and analytics company focused on making data practical. It has two connected
+          sides: practical data education, and analytics and business intelligence work for organisations that need
+          clearer answers from their data. It is early, and the work below is what is being built now.
         </p>
 
-        <div class="experience-subheading">Currently focused on:</div>
-
         <ul class="experience-bullets">
-
-          <li>
-            Developing practical, career-focused data education and the first THINDA course curriculum in collaboration with experienced data professionals.
-          </li>
-
-          <li>
-            Building an early community around practical data learning through content, conversations, and shared learning experiences.
-          </li>
-
-          <li>
-            Developing learning approaches that emphasize analytical thinking, problem-solving, and applying data to real business situations alongside technical skills.
-          </li>
-
-          <li>
-            Building THINDA's public presence, which began on LinkedIn in July 2026, with plans to establish a presence across X/Twitter, Instagram, TikTok, and YouTube.
-          </li>
-
-          <li>
-            Exploring business intelligence, data analytics, visualization, digital and emerging technologies, and responsible data and AI use.
-          </li>
-
-          <li>
-            Exploring broader questions around data access, sharing, security, and the responsible use of emerging technologies, particularly in the African context.
-          </li>
-
+          <li>Designing a career-focused curriculum around analytical thinking and business problem solving, not tool tours, developed with experienced data professionals.</li>
+          <li>Framing teaching around real business situations: define the question, profile the data, test the explanation, then report the decision.</li>
+          <li>Working through questions of data access, sharing, security and responsible data and AI use, particularly in the African context.</li>
+          <li>Building an early practitioner community and public presence, starting on LinkedIn in July 2026.</li>
         </ul>
 
         <p class="experience-belief">
-          At the centre of THINDA is a simple belief: great analysts are not defined by the number of tools they know, but by how they think, the questions they ask, and the impact they create.
+          The belief behind it: analysts are not defined by how many tools they know, but by how they think, the questions they ask, and the decisions they change.
         </p>
 
       </div>
 
       <div class="experience-item">
 
-        <div class="experience-period">Apr 2024 · September 2026</div>
-
-        <div class="experience-role">Data Analyst</div>
-
+        <div class="experience-period">Apr 2024 &middot; September 2026</div>
+        <h3 class="experience-role">Data Analyst</h3>
         <div class="experience-company">DHL Supply Chain Kenya Limited</div>
 
         <ul class="experience-bullets">
-
-          <li>
-            Design and deliver enterprise Power BI reporting solutions that track transportation KPIs including On-Time Delivery, cost per mile, fleet utilisation, route efficiency, and vehicle performance.
-          </li>
-
-          <li>
-            Analyze 100,000+ monthly transportation records from SQL databases, Digitally Connected Transport (DCT), Tramm Mobile, and Mix Telematics to identify delivery trends, operational risks, and improvement opportunities.
-          </li>
-
-          <li>
-            Support weekly and monthly performance reviews by analyzing KPI trends, investigating operational variances, and translating findings into actionable improvement recommendations.
-          </li>
-
-          <li>
-            Automated Power BI and Excel reporting workflows, reducing report turnaround time by 61% and expanding self-service reporting capabilities across business teams.
-          </li>
-
-          <li>
-            Implemented data quality controls, validation rules, and Power BI Row-Level Security (RLS), improving reporting reliability by 37% and strengthening controlled access to business information.
-          </li>
-
-          <li>
-            Conducted transportation cost analysis that identified inefficient airtime and data bundle allocation, contributing to a 27% reduction in client operational costs.
-          </li>
-
-          <li>
-            Designed a device allocation framework that was adopted into the company's revised standard operating procedures.
-          </li>
-
+          <li>Owned enterprise Power BI reporting for transportation performance, defining and tracking On-Time Delivery, cost per mile, fleet utilisation, route efficiency and vehicle performance with the teams accountable for them.</li>
+          <li>Analysed 100,000+ transportation records a month from SQL databases, Digitally Connected Transport (DCT), Tramm Mobile and Mix Telematics, reconciling sources that did not always agree before reporting on them.</li>
+          <li>Investigated KPI variances ahead of weekly and monthly performance reviews, presenting findings and improvement recommendations to operations and client stakeholders.</li>
+          <li>Automated Power BI and Excel reporting workflows, cutting report turnaround time by 61% and moving business teams onto self-service reporting.</li>
+          <li>Implemented data quality controls, validation rules and Power BI Row-Level Security, improving reporting reliability by 37% and keeping client and site data appropriately scoped.</li>
+          <li>Traced client operational cost against usage data, identified inefficient airtime and data bundle allocation, and contributed to a 27% reduction in client operational costs.</li>
+          <li>Designed a device allocation framework from that analysis, which was adopted into the company's revised standard operating procedures.</li>
         </ul>
 
       </div>
 
-
       <div class="experience-item">
 
-        <div class="experience-period">Mar 2022 · Mar 2024</div>
-
-        <div class="experience-role">Data Analyst</div>
-
+        <div class="experience-period">Mar 2022 &middot; Mar 2024</div>
+        <h3 class="experience-role">Data Analyst</h3>
         <div class="experience-company">FirstCode Corporation Inc.</div>
 
         <ul class="experience-bullets">
-
-          <li>
-            Prepared and transformed business datasets using SQL and Excel, improving data consistency through validation and cleaning processes.
-          </li>
-
-          <li>
-            Developed reusable reporting templates and SQL-based reporting workflows, reducing report preparation time by 48%.
-          </li>
-
-          <li>
-            Delivered analytical reports and dashboards that supported operational decision-making across multiple client projects.
-          </li>
-
+          <li>Prepared and transformed business datasets using SQL and Excel, improving data consistency through validation and cleaning.</li>
+          <li>Built reusable reporting templates and SQL-based reporting workflows, reducing report preparation time by 48%.</li>
+          <li>Delivered analytical reports and dashboards that supported operational decision-making across multiple client projects.</li>
         </ul>
 
       </div>
@@ -1282,13 +1301,13 @@
     <h2 class="section-title">Get in Touch</h2>
 
     <p class="section-desc" style="margin: 0 auto; max-width: 1020px; text-align: left;">
-    Open to Senior Data Analyst opportunities focused on analytics, enterprise<br> reporting, and data-driven decision making.
+    Open to Senior Data Analyst and Senior BI Analyst roles where the work involves framing the question, not only building the report. Nairobi-based.
     </p>
 
 
     <div class="contact-grid">
 
-      <a href="https://www.linkedin.com/in/abijahkabiro/" target="_blank" class="contact-card">
+      <a href="https://www.linkedin.com/in/abijahkabiro/" target="_blank" rel="noopener noreferrer" class="contact-card">
 
         <div class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></div>
         <div class="contact-label">LinkedIn</div>
@@ -1298,7 +1317,7 @@
       </a>
 
 
-      <a href="https://github.com/Abijahkabiro" target="_blank" class="contact-card">
+      <a href="https://github.com/Abijahkabiro" target="_blank" rel="noopener noreferrer" class="contact-card">
 
         <div class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.15-.02-2.09-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .3.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></div>
         <div class="contact-label">GitHub</div>
@@ -1308,7 +1327,7 @@
       </a>
 
 
-      <a href="https://medium.com/@abijahkabiro" target="_blank" class="contact-card">
+      <a href="https://medium.com/@abijahkabiro" target="_blank" rel="noopener noreferrer" class="contact-card">
 
         <div class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 1 1-13.6 0 6.8 6.8 0 0 1 13.6 0zM20.8 12c0 3.54-1.52 6.4-3.4 6.4-1.88 0-3.4-2.87-3.4-6.4s1.52-6.4 3.4-6.4c1.88 0 3.4 2.87 3.4 6.4zM24 12c0 3.17-.53 5.75-1.2 5.75-.66 0-1.2-2.57-1.2-5.75s.53-5.75 1.2-5.75c.66 0 1.2 2.57 1.2 5.75z"/></svg></div>
         <div class="contact-label">Medium</div>
@@ -1318,7 +1337,7 @@
       </a>
 
 
-      <a href="https://www.instagram.com/abijahtheanalyst/" target="_blank" class="contact-card">
+      <a href="https://www.instagram.com/abijahtheanalyst/" target="_blank" rel="noopener noreferrer" class="contact-card">
 
         <div class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
         <div class="contact-label">Instagram</div>
@@ -1327,7 +1346,7 @@
 
       </a>
 
-      <a href="https://www.tiktok.com/@abijahtheanalyst" target="_blank" class="contact-card">
+      <a href="https://www.tiktok.com/@abijahtheanalyst" target="_blank" rel="noopener noreferrer" class="contact-card">
 
         <div class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg></div>
         <div class="contact-label">TikTok</div>
